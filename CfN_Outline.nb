@@ -1,0 +1,584 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='WolframDesktop 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       161,          7]
+NotebookDataLength[     20187,        576]
+NotebookOptionsPosition[     12980,        405]
+NotebookOutlinePosition[     13387,        421]
+CellTagsIndexPosition[     13344,        418]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Computation for Neuroscience", "Title",
+ CellChangeTimes->{{3.707236868066057*^9, 
+  3.707236872911228*^9}},ExpressionUUID->"60da41e5-bfd6-4a15-9baa-\
+aa1262150a06"],
+
+Cell[CellGroupData[{
+
+Cell["General Methods of Neural Coding", "Outline1",
+ CellChangeTimes->{
+  3.70723712942983*^9, {3.7074749296775074`*^9, 3.707474933661949*^9}, {
+   3.707474988951969*^9, 3.7074749973765645`*^9}, {3.7074750384606347`*^9, 
+   3.707475039990361*^9}},ExpressionUUID->"35a297af-0493-4215-b9fd-\
+21f3a50344c1"],
+
+Cell["Population Coding", "Outline2",
+ CellChangeTimes->{{3.707475000301758*^9, 3.7074750257186785`*^9}, {
+  3.707475056302988*^9, 
+  3.7074750840236444`*^9}},ExpressionUUID->"32d8b69a-9059-46ba-b4e3-\
+0b97837b92cb"],
+
+Cell["Lateral Inhibition", "Outline2",
+ CellChangeTimes->{{3.7074750264903564`*^9, 3.7074750518036623`*^9}, {
+  3.707475090100792*^9, 3.7074750903226395`*^9}, {3.7074755314910984`*^9, 
+  3.7074755314910984`*^9}},ExpressionUUID->"bf9771a8-877c-4688-a9be-\
+af240fc43d79"],
+
+Cell["Gain", "Outline2",
+ CellChangeTimes->{{3.707475532004098*^9, 
+  3.70747553254475*^9}},ExpressionUUID->"6c16e7d6-4165-419e-8bc0-\
+2440df735aec"],
+
+Cell["Magnification", "Outline2",
+ CellChangeTimes->{{3.707475583133705*^9, 
+  3.7074755887044334`*^9}},ExpressionUUID->"3c84f567-38f2-4e8c-bf8c-\
+17c3c5eb2c0d"],
+
+Cell["Temporal summation", "Outline2",
+ CellChangeTimes->{{3.707476700041934*^9, 
+  3.7074767036298375`*^9}},ExpressionUUID->"1f0d6b8a-d18b-47a5-aa3d-\
+5b9795c62431"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Modeling Cellular Neurobiology", "Outline1",
+ CellChangeTimes->{{3.707475146304741*^9, 3.7074751588590784`*^9}, {
+  3.7074752126494694`*^9, 
+  3.707475213889512*^9}},ExpressionUUID->"b5a51446-7aec-40fe-a963-\
+6ac4afe68145"],
+
+Cell[CellGroupData[{
+
+Cell["Equivalent circuit", "Outline2",
+ CellChangeTimes->{{3.7074753412892804`*^9, 
+  3.707475355414474*^9}},ExpressionUUID->"b5cfa982-6184-464c-80b7-\
+3ff3b7f5fd72"],
+
+Cell["Ohm\[CloseCurlyQuote]s Law", "Outline3",
+ CellChangeTimes->{{3.7074753562991657`*^9, 
+  3.7074753657063003`*^9}},ExpressionUUID->"766137c4-e266-48be-add6-\
+39f114a5e96d"]
+}, Open  ]],
+
+Cell["Hodgkin-Huxley Equations", "Outline2",
+ CellChangeTimes->{{3.707475171632864*^9, 
+  3.7074751806849804`*^9}},ExpressionUUID->"bf4d82d0-d6f5-4ed0-bae7-\
+d31c55617551"],
+
+Cell["Modeling Neural Plasticity", "Outline2",
+ CellChangeTimes->{{3.7074751845640693`*^9, 
+  3.707475187438734*^9}},ExpressionUUID->"ce06d675-c489-4edb-b217-\
+7f15bdfc527f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Sensory Neural Systems", "Outline1",
+ CellChangeTimes->{{3.7074751255720816`*^9, 3.7074751332116337`*^9}, {
+  3.7074752167998233`*^9, 3.7074752168003235`*^9}, {3.7074753901208076`*^9, 
+  3.7074753901213083`*^9}},ExpressionUUID->"bf09800f-a0b7-4aac-b6c0-\
+d74c1d476482"],
+
+Cell[CellGroupData[{
+
+Cell["Intensity Coding", "Outline2",
+ CellChangeTimes->{{3.707475391512252*^9, 
+  3.707475397837424*^9}},ExpressionUUID->"0cdc9fa0-8135-4143-a625-\
+08511a16e137"],
+
+Cell["Weber\[CloseCurlyQuote]s Law and Just-noticeable-difference", "Outline3",
+ CellChangeTimes->{{3.707475398914748*^9, 
+  3.707475427809596*^9}},ExpressionUUID->"73eee621-df39-44b5-99bf-\
+b2a8cc1929b2"],
+
+Cell["Weber-Fechner Law", "Outline3",
+ CellChangeTimes->{{3.7074754284573526`*^9, 
+  3.707475433051592*^9}},ExpressionUUID->"7d6ed2e0-d392-4016-9879-\
+88d864e8d591"],
+
+Cell["Steven\[CloseCurlyQuote]s Power Law", "Outline3",
+ CellChangeTimes->{{3.707475433790241*^9, 
+  3.7074754796955576`*^9}},ExpressionUUID->"6830d010-3ff1-4697-a760-\
+a54f9199a2ee"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Neural receptors", "Outline2",
+ CellChangeTimes->{{3.7074754813786764`*^9, 
+  3.7074754987058773`*^9}},ExpressionUUID->"6b324a31-547c-421d-ad08-\
+61aeb1ab8635"],
+
+Cell["Transduction", "Outline3",
+ CellChangeTimes->{{3.707475499595503*^9, 
+  3.7074755021613336`*^9}},ExpressionUUID->"a607bfd7-cf01-406b-8c27-\
+f43067b4ec5d"],
+
+Cell["Operating characteristics", "Outline3",
+ CellChangeTimes->{{3.7074755037655334`*^9, 3.707475508113038*^9}, {
+  3.707475539758957*^9, 
+  3.707475539759457*^9}},ExpressionUUID->"7c108321-37ed-4793-b1b8-\
+39325e87ee42"],
+
+Cell["Adaptation", "Outline3",
+ CellChangeTimes->{{3.707475540262986*^9, 
+  3.70747554147608*^9}},ExpressionUUID->"006f58aa-4d43-4bd0-84d1-\
+c79e1bb8d480"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Receptive Fields", "Outline2",
+ CellChangeTimes->{{3.707475217697227*^9, 3.7074752197672243`*^9}, {
+  3.707475252767417*^9, 
+  3.707475252767917*^9}},ExpressionUUID->"56b8c601-cc6e-48c2-b7af-\
+77db32bbf2ce"],
+
+Cell["Hermann Grid", "Outline3",
+ CellChangeTimes->{{3.70747639738286*^9, 
+  3.7074764200032654`*^9}},ExpressionUUID->"720bc465-9218-483e-94c7-\
+a0ed2dbcee18"],
+
+Cell["Orientation adaptation", "Outline3",
+ CellChangeTimes->{{3.7074764208966627`*^9, 
+  3.7074764256412044`*^9}},ExpressionUUID->"b863071d-d6c0-40b5-a6c3-\
+3d2ba821b1b3"]
+}, Open  ]],
+
+Cell["Central Maps", "Outline2",
+ CellChangeTimes->{{3.70747565095601*^9, 3.707475653595439*^9}, {
+  3.707475703230118*^9, 
+  3.707475717136464*^9}},ExpressionUUID->"9d4fb5f4-afec-45dd-8aa2-\
+a4f74181bde4"],
+
+Cell[CellGroupData[{
+
+Cell["Color", "Outline2",
+ CellChangeTimes->{{3.7074763698683577`*^9, 
+  3.707476382946823*^9}},ExpressionUUID->"92a6a7d3-70b7-4b5a-a410-\
+96847c924163"],
+
+Cell["Metamers", "Outline3",
+ CellChangeTimes->{{3.707476383750886*^9, 
+  3.7074763847150826`*^9}},ExpressionUUID->"971e2018-8053-4c55-9667-\
+4a09e0a431e1"]
+}, Open  ]],
+
+Cell["Volley coding", "Outline2",
+ CellChangeTimes->{{3.7074764494563165`*^9, 3.707476450249326*^9}, {
+  3.707476499670143*^9, 
+  3.707476501199398*^9}},ExpressionUUID->"ec682862-2ef3-487e-bf03-\
+e2609903c79d"],
+
+Cell["Sensory/Motor Processing in the Superior Colliculus", "Outline2",
+ CellChangeTimes->{{3.707475257272565*^9, 
+  3.707475266432659*^9}},ExpressionUUID->"5ded7f1e-1110-4b5a-9544-\
+9367854da7a9"],
+
+Cell["\<\
+Relationship between Nyquist Frequency and Cut-off Frequency of the CSF\
+\>", "Outline2",
+ CellChangeTimes->{{3.7074760520600233`*^9, 
+  3.7074760686992674`*^9}},ExpressionUUID->"0bac836e-ea64-44f2-8d36-\
+8811c170befc"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Motor Systems", "Outline1",
+ CellChangeTimes->{{3.707475161852153*^9, 3.707475169289547*^9}, {
+  3.7074752301781435`*^9, 
+  3.7074752301786437`*^9}},ExpressionUUID->"c51ecfad-25dd-445b-9b93-\
+61a95c6f6461"],
+
+Cell["Efference Copy", "Outline2",
+ CellChangeTimes->{{3.7074752309272685`*^9, 
+  3.7074752367025695`*^9}},ExpressionUUID->"e252be8f-9748-440c-8f2b-\
+4594d6c959b1"],
+
+Cell["Control Systems", "Outline2",
+ CellChangeTimes->{{3.7074752374527287`*^9, 
+  3.7074752402652216`*^9}},ExpressionUUID->"06a0b343-269d-4d27-b5a4-\
+1980834463d5"],
+
+Cell["Myotatic reflex", "Outline2",
+ CellChangeTimes->{{3.7074767301385927`*^9, 
+  3.7074767353443766`*^9}},ExpressionUUID->"aee71a5b-513d-47dc-817b-\
+4d5f8776c7e6"],
+
+Cell["Stiffness", "Outline2",
+ CellChangeTimes->{{3.7074767357485485`*^9, 
+  3.707476737002266*^9}},ExpressionUUID->"1a330d28-e64f-4b87-8330-\
+526d601a585f"],
+
+Cell["Central Pattern Generators", "Outline2",
+ CellChangeTimes->{{3.7074767488877954`*^9, 
+  3.7074767540368366`*^9}},ExpressionUUID->"31da45b2-0cae-4e97-a008-\
+a340d42ef3a5"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Visualizing Neural Data", "Outline1",
+ CellChangeTimes->{
+  3.70723712942983*^9, {3.7074749296775074`*^9, 
+   3.707474933661949*^9}},ExpressionUUID->"7b4860a6-8aa0-4358-837b-\
+cc14c2307869"],
+
+Cell["log-log Plots", "Outline2",
+ CellChangeTimes->{{3.7074749352302027`*^9, 3.707474963826949*^9}, {
+  3.707475066011652*^9, 
+  3.707475066202888*^9}},ExpressionUUID->"8c0720d4-13ee-4d57-9f6b-\
+545f20273415"],
+
+Cell["Raster Plots", "Outline2",
+ CellChangeTimes->{{3.7074749352302027`*^9, 
+  3.7074749368076673`*^9}},ExpressionUUID->"1cdf75c6-e655-4387-ad85-\
+f4e79be6dfc1"],
+
+Cell[CellGroupData[{
+
+Cell["Peri-Stimulus Time Histograms", "Outline2",
+ CellChangeTimes->{{3.707474940134459*^9, 3.7074749471729035`*^9}, {
+  3.7074750702101927`*^9, 3.707475076373026*^9}, {3.707475305145747*^9, 
+  3.707475305146248*^9}},ExpressionUUID->"34afc772-60cf-4055-93e6-\
+7f5ce5ffbdb4"],
+
+Cell["Time-locking", "Outline3",
+ CellChangeTimes->{{3.7074753061459074`*^9, 
+  3.7074753088704915`*^9}},ExpressionUUID->"2af38dc2-6c93-4563-9ac6-\
+ace182f2cc29"],
+
+Cell["Average Response", "Outline3",
+ CellChangeTimes->{{3.707475309948428*^9, 
+  3.707475318626396*^9}},ExpressionUUID->"a871ac3c-e201-4c65-a768-\
+a4cc9a67080f"],
+
+Cell["Signal-to-noise ratio", "Outline3",
+ CellChangeTimes->{{3.7074753190843153`*^9, 
+  3.70747532351669*^9}},ExpressionUUID->"3a86741e-8615-4efa-a12b-\
+58351c4df9c6"]
+}, Open  ]],
+
+Cell["Tuning Curves", "Outline2",
+ CellChangeTimes->{{3.7074749474917607`*^9, 3.7074749498550215`*^9}, {
+  3.70747508063976*^9, 
+  3.707475080917924*^9}},ExpressionUUID->"b59daa98-5b77-4f64-ac31-\
+1dd360de9902"],
+
+Cell["Spectrograms", "Outline2",
+ CellChangeTimes->{{3.7074764855432415`*^9, 
+  3.707476490379915*^9}},ExpressionUUID->"a0a2038c-079d-4d9d-9efd-\
+a089de32fa73"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Mathematics for Neuroscience", "Outline1",
+ CellChangeTimes->{{3.7072368933704834`*^9, 
+  3.707236898221569*^9}},ExpressionUUID->"ef7a394f-e323-48e9-9e13-\
+0b30cc8085ea"],
+
+Cell["Logarithms", "Outline2",
+ CellChangeTimes->{{3.707236899222221*^9, 
+  3.7072369016215267`*^9}},ExpressionUUID->"6019d169-ea9a-43bf-a0a1-\
+16e5ea68f466"],
+
+Cell[CellGroupData[{
+
+Cell["Linear Algebra", "Outline2",
+ CellChangeTimes->{{3.7072369077537165`*^9, 3.7072369095759106`*^9}, 
+   3.7072369977688684`*^9, {3.7072370287937346`*^9, 3.7072370322146425`*^9}, {
+   3.7074750124753084`*^9, 
+   3.7074750124798117`*^9}},ExpressionUUID->"ef035047-9260-4407-9e59-\
+8391272a946e"],
+
+Cell["Vector Averaging", "Outline3",
+ CellChangeTimes->{{3.707475013238502*^9, 3.7074750166357327`*^9}, {
+  3.7074750960095067`*^9, 
+  3.7074750960095067`*^9}},ExpressionUUID->"e15e3bee-c59c-46b0-9415-\
+7324eb7b2e12"],
+
+Cell["Coordinate transformations", "Outline3",
+ CellChangeTimes->{{3.707475096623503*^9, 
+  3.7074751148726573`*^9}},ExpressionUUID->"f0101766-dc49-4332-92b3-\
+12ea3fbd990e"]
+}, Open  ]],
+
+Cell["Differential Equations", "Outline2",
+ CellChangeTimes->{{3.7072369843883543`*^9, 3.707236988835512*^9}, {
+  3.707237037819171*^9, 
+  3.707237045572023*^9}},ExpressionUUID->"e631602f-686e-43c5-8d80-\
+b648dcea83c5"],
+
+Cell[CellGroupData[{
+
+Cell["Randomness", "Outline2",
+ CellChangeTimes->{{3.707237007571598*^9, 3.707237054790437*^9}, {
+  3.7072371161067967`*^9, 
+  3.7072371161067967`*^9}},ExpressionUUID->"fb7904be-c814-42ce-a135-\
+8ec75034659f"],
+
+Cell["Noise", "Outline3",
+ CellChangeTimes->{{3.7072371170751*^9, 
+  3.707237117906246*^9}},ExpressionUUID->"b9560569-3a6a-4fdd-bdcb-\
+7ed90def147a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Statistics", "Outline2",
+ CellChangeTimes->{{3.7072370552898784`*^9, 
+  3.707237056460218*^9}},ExpressionUUID->"4b520412-5972-471f-9f8e-\
+6af02ba77862"],
+
+Cell["Normal Distributions", "Outline3",
+ CellChangeTimes->{{3.7072370752133055`*^9, 
+  3.707237079619278*^9}},ExpressionUUID->"ec8991b5-5f16-4a07-8135-\
+ac3698946afd"],
+
+Cell["PDF/CDF", "Outline3",
+ CellChangeTimes->{{3.7072370893200407`*^9, 
+  3.707237101890791*^9}},ExpressionUUID->"46d093d6-087e-468c-86ae-\
+52cafbdcaa83"],
+
+Cell["Fitting Data", "Outline3",
+ CellChangeTimes->{{3.7072371023707247`*^9, 
+  3.707237111390828*^9}},ExpressionUUID->"97cbaeb3-92dd-4630-936b-\
+695357cf871d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Signal Processing", "Outline2",
+ CellChangeTimes->{{3.707475740828356*^9, 3.7074757543062515`*^9}, {
+  3.707475854322983*^9, 
+  3.7074758557008257`*^9}},ExpressionUUID->"3795bf1b-9082-450c-bb0d-\
+a02c373cfc65"],
+
+Cell["Frequency and Period", "Outline3",
+ CellChangeTimes->{{3.7074757492644405`*^9, 3.7074757495566626`*^9}, {
+  3.7074758587202983`*^9, 
+  3.707475862173564*^9}},ExpressionUUID->"029e8fe0-ce21-495f-ba49-\
+ac32c1c257c6"],
+
+Cell["Sampling theory", "Outline3",
+ CellChangeTimes->{{3.707475890515983*^9, 
+  3.7074758954892054`*^9}},ExpressionUUID->"c59e4f54-781f-482f-b234-\
+fe55075eee17"],
+
+Cell["Filtering", "Outline3",
+ CellChangeTimes->{{3.7074759129153104`*^9, 
+  3.7074759169480686`*^9}},ExpressionUUID->"2a301bc0-8005-4b54-970c-\
+9cd20d64f5ed"],
+
+Cell["Fourier decomposition", "Outline3",
+ CellChangeTimes->{{3.707476613311762*^9, 
+  3.7074766220234904`*^9}},ExpressionUUID->"73e4bc74-de22-4334-bfa7-\
+bb2faa212dcf"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{719, 868},
+WindowMargins->{{-7, Automatic}, {Automatic, 0}},
+FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (April 27, 2017)",
+StyleDefinitions->FrontEnd`FileName[{"Utility"}, "Outline.nb", 
+  CharacterEncoding -> "UTF-8"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[583, 22, 171, 3, 101, "Title", "ExpressionUUID" -> \
+"60da41e5-bfd6-4a15-9baa-aa1262150a06"],
+Cell[CellGroupData[{
+Cell[779, 29, 305, 5, 36, "Outline1", "ExpressionUUID" -> \
+"35a297af-0493-4215-b9fd-21f3a50344c1"],
+Cell[1087, 36, 216, 4, 32, "Outline2", "ExpressionUUID" -> \
+"32d8b69a-9059-46ba-b4e3-0b97837b92cb"],
+Cell[1306, 42, 269, 4, 29, "Outline2", "ExpressionUUID" -> \
+"bf9771a8-877c-4688-a9be-af240fc43d79"],
+Cell[1578, 48, 149, 3, 29, "Outline2", "ExpressionUUID" -> \
+"6c16e7d6-4165-419e-8bc0-2440df735aec"],
+Cell[1730, 53, 161, 3, 29, "Outline2", "ExpressionUUID" -> \
+"3c84f567-38f2-4e8c-bf8c-17c3c5eb2c0d"],
+Cell[1894, 58, 166, 3, 29, "Outline2", "ExpressionUUID" -> \
+"1f0d6b8a-d18b-47a5-aa3d-5b9795c62431"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2097, 66, 229, 4, 36, "Outline1", "ExpressionUUID" -> \
+"b5a51446-7aec-40fe-a963-6ac4afe68145"],
+Cell[CellGroupData[{
+Cell[2351, 74, 166, 3, 32, "Outline2", "ExpressionUUID" -> \
+"b5cfa982-6184-464c-80b7-3ff3b7f5fd72"],
+Cell[2520, 79, 176, 3, 28, "Outline3", "ExpressionUUID" -> \
+"766137c4-e266-48be-add6-39f114a5e96d"]
+}, Open  ]],
+Cell[2711, 85, 172, 3, 32, "Outline2", "ExpressionUUID" -> \
+"bf4d82d0-d6f5-4ed0-bae7-d31c55617551"],
+Cell[2886, 90, 174, 3, 29, "Outline2", "ExpressionUUID" -> \
+"ce06d675-c489-4edb-b217-7f15bdfc527f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3097, 98, 275, 4, 36, "Outline1", "ExpressionUUID" -> \
+"bf09800f-a0b7-4aac-b6c0-d74c1d476482"],
+Cell[CellGroupData[{
+Cell[3397, 106, 162, 3, 32, "Outline2", "ExpressionUUID" -> \
+"0cdc9fa0-8135-4143-a625-08511a16e137"],
+Cell[3562, 111, 205, 3, 28, "Outline3", "ExpressionUUID" -> \
+"73eee621-df39-44b5-99bf-b2a8cc1929b2"],
+Cell[3770, 116, 165, 3, 25, "Outline3", "ExpressionUUID" -> \
+"7d6ed2e0-d392-4016-9879-88d864e8d591"],
+Cell[3938, 121, 183, 3, 25, "Outline3", "ExpressionUUID" -> \
+"6830d010-3ff1-4697-a760-a54f9199a2ee"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4158, 129, 166, 3, 32, "Outline2", "ExpressionUUID" -> \
+"6b324a31-547c-421d-ad08-61aeb1ab8635"],
+Cell[4327, 134, 160, 3, 28, "Outline3", "ExpressionUUID" -> \
+"a607bfd7-cf01-406b-8c27-f43067b4ec5d"],
+Cell[4490, 139, 222, 4, 25, "Outline3", "ExpressionUUID" -> \
+"7c108321-37ed-4793-b1b8-39325e87ee42"],
+Cell[4715, 145, 155, 3, 25, "Outline3", "ExpressionUUID" -> \
+"006f58aa-4d43-4bd0-84d1-c79e1bb8d480"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4907, 153, 213, 4, 32, "Outline2", "ExpressionUUID" -> \
+"56b8c601-cc6e-48c2-b7af-77db32bbf2ce"],
+Cell[5123, 159, 159, 3, 28, "Outline3", "ExpressionUUID" -> \
+"720bc465-9218-483e-94c7-a0ed2dbcee18"],
+Cell[5285, 164, 172, 3, 25, "Outline3", "ExpressionUUID" -> \
+"b863071d-d6c0-40b5-a6c3-3d2ba821b1b3"]
+}, Open  ]],
+Cell[5472, 170, 206, 4, 32, "Outline2", "ExpressionUUID" -> \
+"9d4fb5f4-afec-45dd-8aa2-a4f74181bde4"],
+Cell[CellGroupData[{
+Cell[5703, 178, 153, 3, 29, "Outline2", "ExpressionUUID" -> \
+"92a6a7d3-70b7-4b5a-a410-96847c924163"],
+Cell[5859, 183, 156, 3, 28, "Outline3", "ExpressionUUID" -> \
+"971e2018-8053-4c55-9667-4a09e0a431e1"]
+}, Open  ]],
+Cell[6030, 189, 210, 4, 32, "Outline2", "ExpressionUUID" -> \
+"ec682862-2ef3-487e-bf03-e2609903c79d"],
+Cell[6243, 195, 197, 3, 29, "Outline2", "ExpressionUUID" -> \
+"5ded7f1e-1110-4b5a-9544-9367854da7a9"],
+Cell[6443, 200, 229, 5, 48, "Outline2", "ExpressionUUID" -> \
+"0bac836e-ea64-44f2-8d36-8811c170befc"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6709, 210, 212, 4, 36, "Outline1", "ExpressionUUID" -> \
+"c51ecfad-25dd-445b-9b93-61a95c6f6461"],
+Cell[6924, 216, 164, 3, 32, "Outline2", "ExpressionUUID" -> \
+"e252be8f-9748-440c-8f2b-4594d6c959b1"],
+Cell[7091, 221, 165, 3, 29, "Outline2", "ExpressionUUID" -> \
+"06a0b343-269d-4d27-b5a4-1980834463d5"],
+Cell[7259, 226, 165, 3, 29, "Outline2", "ExpressionUUID" -> \
+"aee71a5b-513d-47dc-817b-4d5f8776c7e6"],
+Cell[7427, 231, 157, 3, 29, "Outline2", "ExpressionUUID" -> \
+"1a330d28-e64f-4b87-8330-526d601a585f"],
+Cell[7587, 236, 176, 3, 29, "Outline2", "ExpressionUUID" -> \
+"31da45b2-0cae-4e97-a008-a340d42ef3a5"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7800, 244, 196, 4, 36, "Outline1", "ExpressionUUID" -> \
+"7b4860a6-8aa0-4358-837b-cc14c2307869"],
+Cell[7999, 250, 210, 4, 32, "Outline2", "ExpressionUUID" -> \
+"8c0720d4-13ee-4d57-9f6b-545f20273415"],
+Cell[8212, 256, 162, 3, 29, "Outline2", "ExpressionUUID" -> \
+"1cdf75c6-e655-4387-ad85-f4e79be6dfc1"],
+Cell[CellGroupData[{
+Cell[8399, 263, 274, 4, 29, "Outline2", "ExpressionUUID" -> \
+"34afc772-60cf-4055-93e6-7f5ce5ffbdb4"],
+Cell[8676, 269, 162, 3, 28, "Outline3", "ExpressionUUID" -> \
+"2af38dc2-6c93-4563-9ac6-ace182f2cc29"],
+Cell[8841, 274, 162, 3, 25, "Outline3", "ExpressionUUID" -> \
+"a871ac3c-e201-4c65-a768-a4cc9a67080f"],
+Cell[9006, 279, 168, 3, 25, "Outline3", "ExpressionUUID" -> \
+"3a86741e-8615-4efa-a12b-58351c4df9c6"]
+}, Open  ]],
+Cell[9189, 285, 211, 4, 32, "Outline2", "ExpressionUUID" -> \
+"b59daa98-5b77-4f64-ac31-1dd360de9902"],
+Cell[9403, 291, 160, 3, 29, "Outline2", "ExpressionUUID" -> \
+"a0a2038c-079d-4d9d-9efd-a089de32fa73"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9600, 299, 176, 3, 36, "Outline1", "ExpressionUUID" -> \
+"ef7a394f-e323-48e9-9e13-0b30cc8085ea"],
+Cell[9779, 304, 158, 3, 32, "Outline2", "ExpressionUUID" -> \
+"6019d169-ea9a-43bf-a0a1-16e5ea68f466"],
+Cell[CellGroupData[{
+Cell[9962, 311, 297, 5, 29, "Outline2", "ExpressionUUID" -> \
+"ef035047-9260-4407-9e59-8391272a946e"],
+Cell[10262, 318, 217, 4, 28, "Outline3", "ExpressionUUID" -> \
+"e15e3bee-c59c-46b0-9415-7324eb7b2e12"],
+Cell[10482, 324, 174, 3, 25, "Outline3", "ExpressionUUID" -> \
+"f0101766-dc49-4332-92b3-12ea3fbd990e"]
+}, Open  ]],
+Cell[10671, 330, 219, 4, 32, "Outline2", "ExpressionUUID" -> \
+"e631602f-686e-43c5-8d80-b648dcea83c5"],
+Cell[CellGroupData[{
+Cell[10915, 338, 209, 4, 29, "Outline2", "ExpressionUUID" -> \
+"fb7904be-c814-42ce-a135-8ec75034659f"],
+Cell[11127, 344, 149, 3, 28, "Outline3", "ExpressionUUID" -> \
+"b9560569-3a6a-4fdd-bdcb-7ed90def147a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11313, 352, 158, 3, 32, "Outline2", "ExpressionUUID" -> \
+"4b520412-5972-471f-9f8e-6af02ba77862"],
+Cell[11474, 357, 168, 3, 28, "Outline3", "ExpressionUUID" -> \
+"ec8991b5-5f16-4a07-8135-ac3698946afd"],
+Cell[11645, 362, 155, 3, 25, "Outline3", "ExpressionUUID" -> \
+"46d093d6-087e-468c-86ae-52cafbdcaa83"],
+Cell[11803, 367, 160, 3, 25, "Outline3", "ExpressionUUID" -> \
+"97cbaeb3-92dd-4630-936b-695357cf871d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12000, 375, 216, 4, 32, "Outline2", "ExpressionUUID" -> \
+"3795bf1b-9082-450c-bb0d-a02c373cfc65"],
+Cell[12219, 381, 221, 4, 28, "Outline3", "ExpressionUUID" -> \
+"029e8fe0-ce21-495f-ba49-ac32c1c257c6"],
+Cell[12443, 387, 163, 3, 25, "Outline3", "ExpressionUUID" -> \
+"c59e4f54-781f-482f-b234-fe55075eee17"],
+Cell[12609, 392, 159, 3, 25, "Outline3", "ExpressionUUID" -> \
+"2a301bc0-8005-4b54-970c-9cd20d64f5ed"],
+Cell[12771, 397, 169, 3, 25, "Outline3", "ExpressionUUID" -> \
+"73e4bc74-de22-4334-bfa7-bb2faa212dcf"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
