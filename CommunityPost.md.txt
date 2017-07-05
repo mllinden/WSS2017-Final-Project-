@@ -1,0 +1,62 @@
+I came to the 2017 Wolfram Summer School with a problem - the majority of my neuroscience students struggle with computational and quantitative topics.  Because neuroscience is inherently computational (as it is the study of brains), and because the field is likely to become more and more computational going forward, it is crucial that the students learn the fundamentals of approaching neuroscience from a computational perspective.  As a summer school participant, I was hoping to learn if and how the Wolfram tools could be used in my courses to facilitate student learning.  This morphed into a project to create a *Computation for Neuroscience* book, in the style of *An Elementary Introduction to the Wolfram Language,* to teach computational thinking skills for neuroscience.
+
+Because so much of neuroscience is inherently computational, it was challenging to determine how to best organize a book on this broad topic.  After an evening discussion with Stephen Wolfram on the topic of teaching computational thinking, it became evident that the best approach was to apply backwards design principles to create a course called **Computation for Neuroscience** and to have the *Computation for Neuroscience* book serve as the main text for the course.  This book could also provide supplementary activities for pre-existing neuroscience courses that include computational materials, like the course in which I am hoping to help my own students.
+
+The first step in a backwards design approach is to formulate the goals and objectives for the course.  After the discussion on teaching computational thinking, I was inspired to write a syllabus for an **Introduction to Computational Thinking** course.  I came up with goals for that course, which I then adapted into objectives for **Computation for Neuroscience** as follows:
+
+By the end of the course:
+
+ - Students will be able to define computational thinking and explain
+   the underlying principles of computability and computational
+   thinking.
+ - Students will understand what is meant by "data", where neural data
+   come from, and how to get data into useful formats for computation.
+ - Students will understand standard forms of data visualization used in
+   the field of neuroscience, be able to interpret data visualizations,
+   and be able to create data visualizations.
+ - Students will understand standard methods of data analysis for
+   neuroscience, be able to apply analysis methods to data, and be able
+   to interpret analyzed data.
+ - Students will understand standard methods and uses for machine
+   learning in neuroscience and be able to apply machine learning
+   techniques to neuroscientific data sets.
+ - Students will explore how biases develop in computational thinking
+   and how this can affect experimental design and data interpretation
+   within the field.
+ - Students will turn their own neuroscience ideas into something
+   computational!
+
+Given these goals, the next step in the backwards design process is to design assessments to get students to these goals.  In an ideal situation, our students would be able to use the computer to help answer neuroscience questions and solve neuroscience problems.  Therefore, I chose open-ended projects as the main summative assessments for the course.  These should be designed to help students relate neuroscience concepts to computational work.  These will give the students the opportunity to work with data sets and will require students to produce their own visualizations, analyses and interpretations.  By the end of the course, we would expect students to work on projects for which there is not already a known answer.  A project of this form is aligned with the course objectives.
+
+During the Wolfram Summer School, I created the outline for one project, entitled "How do we know where to look?" which looks at the computational processes in an area of the brain called the superior colliculus which converts visual input to motor output controlling eye position.  I selected this topic because it could be included in the *Computation for Neuroscience* book, and it is also a topic of great confusion for the students I would like to support in my existing course.
+
+Continuing with the backwards design process, the next step is to create materials to scaffold the students' learning such that they can complete this project.  I will create short explorations which are multi-step interactive problems including single lines of code interspersed with very brief written explanations.  These are designed to guide students through several concepts that relate to one neuroscience topic and to expose the way computational thinking can aid in the understanding of that topic.  Explorations may access data, contain code, include visualizations, and facilitate student learning through exploratory questions.  
+
+In the summer school, I created one exploration, entitled "Where do tuning curves come from?".  I selected this topic for several reasons.  Primarily, it scaffolds the "How do we know where to look?" project while helping my neuroscience students explore a topic with known misconceptions.   Additionally, it demonstrates a variety of ways to visualize a simple data set.  Here is an example visualization from that exploration. [(The complete notebook is available here.)][1]
+
+![Raster Plots in a Circle][2]
+
+Given these two types of assessments, the rest of the course materials will be designed as additional scaffolding.  These will include lectures which will primarily consist of "live coding" notebooks - sometimes with students typing along, and sometimes with students watching and participating without their computer.  (All notebooks will be available to the students.)  The other main component of the course materials will be activities which can be used in class for both solo or small group work, or can be used (or revisited) outside of class.  Student activities are small, interactive lessons including descriptions, manipulates, and guiding questions.  They are designed to explore single concepts and to serve as a mechanism for formative assessment. Again, these activities can be used in other neuroscience classes to help students explore computational topics.
+
+Over the course of the summer school, I created three activities (with links to the notebooks):
+
+ - [How does bin size affect histograms?][3]
+ - [What is a logarithm and how does it relate to sensory processing?][4]
+ - [What do we mean by a coordinate system transformation?][5]
+
+These scaffold the exploration and the project and are highly relevant to the pre-existing course content.  
+
+Here is an example of a Manipulate from the coordinate system transformation activity.  In this example, the plot on the left represents the visual world and the plot on the right represents the projection of the visual world onto a map in the brain distorted by magnification.
+![Animated coordinate system transformation][6]
+
+Going forward, I will continue to create projects, explorations and activities, as well as lectures to teach computation for neuroscience.  These can then be assembled into the **Computation for Neuroscience** book.
+
+I would appreciate any feedback on this process.  How do you use Wolfram tools in your classrooms to support computational thinking? How do you design courses that make use of the Wolfram language? Is anyone else out there using the Wolfram language in a neuroscience classroom?
+
+
+  [1]: https://github.com/mllinden/WSS2017-Final-Project-/blob/master/Explorations/01_TuningCurves_Exploration.nb
+  [2]: http://community.wolfram.com//c/portal/getImageAttachment?filename=rasterplot.png&userId=1084210
+  [3]: https://github.com/mllinden/WSS2017-Final-Project-/blob/master/Activities/01_HistogramBins.nb
+  [4]: https://github.com/mllinden/WSS2017-Final-Project-/blob/master/Activities/03_Logarithms.nb
+  [5]: https://github.com/mllinden/WSS2017-Final-Project-/blob/master/Activities/05_CoordinateSystemTransformations.nb
+  [6]: http://community.wolfram.com//c/portal/getImageAttachment?filename=postmovie.gif&userId=1084210
