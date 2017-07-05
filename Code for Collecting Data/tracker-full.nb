@@ -1,0 +1,1168 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     47832,       1160]
+NotebookOptionsPosition[     45435,       1091]
+NotebookOutlinePosition[     45809,       1107]
+CellTagsIndexPosition[     45766,       1104]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["just movement logs", "Subsubsection",
+ CellChangeTimes->{{3.7076465065660887`*^9, 
+  3.7076465100301104`*^9}},ExpressionUUID->"4eedbd09-c76d-41b7-b69e-\
+8c51d7503c05"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "this", " ", "tracks", " ", "any", " ", "time", " ", "anything", " ", 
+    "has", " ", "been", " ", "changed"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+   RowBox[{"(*", "analytics", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"!", 
+        RowBox[{"IntegerQ", "@", "count"}]}], ",", 
+       RowBox[{"count", "=", "0"}], ",", 
+       RowBox[{"count", "++"}]}], "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"!", 
+        RowBox[{"MatchQ", "[", 
+         RowBox[{"times", ",", 
+          RowBox[{"{", "__Integer", "}"}]}], "]"}]}], ",", 
+       RowBox[{"times", "=", 
+        RowBox[{"{", "}"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"times", "=", 
+      RowBox[{"Union", "@", 
+       RowBox[{"AppendTo", "[", 
+        RowBox[{"times", ",", 
+         RowBox[{"UnixTime", "[", "]"}]}], "]"}]}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{"display", " ", "your", " ", "content"}], "*)"}], 
+     "\[IndentingNewLine]", 
+     RowBox[{"Column", "[", 
+      RowBox[{"Flatten", "@", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", "y", ",", "count", ",", "times"}], "}"}]}], "]"}]}],
+     "\[IndentingNewLine]", 
+    RowBox[{"(*", "controls", "*)"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "0", ",", "1"}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", "0", ",", "1"}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"count", ",", 
+      RowBox[{"ControlType", "\[Rule]", "None"}]}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"times", ",", 
+      RowBox[{"ControlType", "\[Rule]", "None"}]}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"TrackedSymbols", "\[RuleDelayed]", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "y"}], "}"}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"Initialization", "\[RuleDelayed]", 
+     RowBox[{"{", "}"}]}]}], "\[IndentingNewLine]", "]"}]}]], "Input",
+ CellChangeTimes->{{3.7076096015360403`*^9, 3.7076096890596333`*^9}, {
+  3.70760985580054*^9, 3.707609880488579*^9}, {3.7076100602092714`*^9, 
+  3.707610251622193*^9}, {3.707610282873852*^9, 3.7076103059334917`*^9}, {
+  3.707610349432001*^9, 3.707610391998366*^9}, {3.70761056603543*^9, 
+  3.7076106541407533`*^9}},ExpressionUUID->"f2809759-f095-4a2c-8251-\
+35174476e6d9"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`count$$ = 35, $CellContext`times$$ = {
+    1498621855, 1498621856, 1498621857, 1498621858, 1498621874, 1498621879, 
+    1498622015, 1498657199, 1498658278}, $CellContext`x$$ = 
+    0.406, $CellContext`y$$ = 0.10200000000000001`, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`x$$], 0, 1}, {
+      Hold[$CellContext`y$$], 0, 1}, {
+      Hold[$CellContext`count$$]}, {
+      Hold[$CellContext`times$$]}}, Typeset`size$$ = {120., {147.5, 156.5}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`x$4485$$ = 0, $CellContext`y$4486$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`count$$ = Null, $CellContext`times$$ = 
+        Null, $CellContext`x$$ = 0, $CellContext`y$$ = 0}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`x$$, $CellContext`x$4485$$, 0], 
+        Hold[$CellContext`y$$, $CellContext`y$4486$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> (If[
+         Not[
+          IntegerQ[$CellContext`count$$]], $CellContext`count$$ = 0, 
+         Increment[$CellContext`count$$]]; If[
+         Not[
+          MatchQ[$CellContext`times$$, {
+            BlankSequence[
+            Integer]}]], $CellContext`times$$ = {}]; $CellContext`times$$ = 
+        Union[
+          AppendTo[$CellContext`times$$, 
+           UnixTime[]]]; Column[
+         Flatten[{$CellContext`x$$, $CellContext`y$$, $CellContext`count$$, \
+$CellContext`times$$}]]), 
+      "Specifications" :> {{$CellContext`x$$, 0, 1}, {$CellContext`y$$, 0, 
+         1}, {$CellContext`count$$, ControlType -> 
+         None}, {$CellContext`times$$, ControlType -> None}}, 
+      "Options" :> {TrackedSymbols :> {$CellContext`x$$, $CellContext`y$$}}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{381., {228., 237.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.7076096156316223`*^9, 3.7076096919130373`*^9}, 
+   3.7076098858501525`*^9, {3.7076101561602793`*^9, 3.7076102082549477`*^9}, 
+   3.707610255823782*^9, 3.7076102901756744`*^9, {3.707610353433154*^9, 
+   3.7076103928984327`*^9}, {3.707610645991662*^9, 
+   3.707610655325405*^9}},ExpressionUUID->"ebded3e3-47ee-4403-ac0d-\
+22eeeef98f0b"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["movement logs with variable that changed", "Subsubsection",
+ CellChangeTimes->{{3.707646481437935*^9, 3.707646487792472*^9}, {
+  3.7076465202746053`*^9, 
+  3.7076465308316164`*^9}},ExpressionUUID->"009e6830-36ec-48e2-a1db-\
+47e68762e337"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "this", " ", "tracks", " ", "any", " ", "time", " ", "anything", " ", 
+    "has", " ", "been", " ", "changed"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"which", " ", "value", " ", "changed"}], "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"newValues", "=", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", "y"}], "}"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"changedValues", "=", 
+      RowBox[{"First", "/@", 
+       RowBox[{"Select", "[", 
+        RowBox[{
+         RowBox[{"Transpose", "@", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"\"\<x\>\"", ",", "\"\<y\>\""}], "}"}], ",", "newValues",
+             ",", "oldValues"}], "}"}]}], ",", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"#", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], "=!=", 
+           RowBox[{"#", "[", 
+            RowBox[{"[", "3", "]"}], "]"}]}], "&"}]}], "]"}]}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"oldValues", "=", "newValues"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{
+      "record", " ", "data", " ", "when", " ", "interaction", " ", 
+       "happens"}], "*)"}], "\[IndentingNewLine]", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"!", 
+        RowBox[{"IntegerQ", "@", "count"}]}], ",", 
+       RowBox[{"count", "=", "0"}], ",", 
+       RowBox[{"count", "++"}]}], "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"!", 
+        RowBox[{"MatchQ", "[", 
+         RowBox[{"times", ",", 
+          RowBox[{"{", "__List", "}"}]}], "]"}]}], ",", 
+       RowBox[{"times", "=", 
+        RowBox[{"{", "}"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"times", "=", 
+      RowBox[{"Union", "@", 
+       RowBox[{"AppendTo", "[", 
+        RowBox[{"times", ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"UnixTime", "[", "]"}], ",", "changedValues"}], "}"}]}], 
+        "]"}]}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{
+       RowBox[{"regular", " ", "manipulate", " ", "body"}], " ", "-", " ", 
+       RowBox[{
+       "whatever", " ", "you", " ", "want", " ", "to", " ", "display"}]}], 
+      "*)"}], "\[IndentingNewLine]", 
+     RowBox[{"Column", "[", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", "y", ",", "count", ",", 
+        RowBox[{"Grid", "@", "times"}]}], "}"}], "]"}]}], 
+    "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{"regular", " ", "manipulate", " ", "controls"}], "*)"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "0", ",", "1"}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", "0", ",", "1"}], "}"}], ",", "\[IndentingNewLine]", 
+    "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{"stuff", " ", "for", " ", "analytics"}], "*)"}], 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"count", ",", 
+      RowBox[{"ControlType", "\[Rule]", "None"}]}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"times", ",", 
+      RowBox[{"ControlType", "\[Rule]", "None"}]}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"oldValues", ",", 
+      RowBox[{"ControlType", "\[Rule]", "None"}]}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"newValues", ",", 
+      RowBox[{"ControlType", "\[Rule]", "None"}]}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"changedValues", ",", 
+      RowBox[{"ControlType", "\[Rule]", "None"}]}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"TrackedSymbols", "\[RuleDelayed]", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "y"}], "}"}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"Initialization", "\[RuleDelayed]", 
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"newValues", "=", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", "y"}], "}"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{"oldValues", "=", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", "y"}], "}"}]}]}], "\[IndentingNewLine]", "}"}]}]}],
+    "\[IndentingNewLine]", "]"}]}]], "Input",
+ CellChangeTimes->{{3.7076109429337387`*^9, 3.7076109891520653`*^9}, {
+  3.7076112252949896`*^9, 3.707611227248113*^9}, {3.70761130978815*^9, 
+  3.707611690584975*^9}, {3.7076117317297626`*^9, 
+  3.70761173878502*^9}},ExpressionUUID->"6477d9db-fef7-4d08-a717-\
+7add4e0aedb1"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`changedValues$$ = {}, $CellContext`count$$ =
+     136, $CellContext`newValues$$ = {0.154, 
+    0.628}, $CellContext`oldValues$$ = {0.154, 
+    0.628}, $CellContext`times$$ = {{1498622939, {}}, {1498622943, {"x"}}, {
+     1498622944, {"x"}}, {1498622945, {"x"}}, {1498622947, {"y"}}, {
+     1498622948, {"y"}}, {1498657201, {}}, {
+     1498658290, {}}}, $CellContext`x$$ = 0.154, $CellContext`y$$ = 0.628, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`x$$], 0, 1}, {
+      Hold[$CellContext`y$$], 0, 1}, {
+      Hold[$CellContext`count$$]}, {
+      Hold[$CellContext`times$$]}, {
+      Hold[$CellContext`oldValues$$]}, {
+      Hold[$CellContext`newValues$$]}, {
+      Hold[$CellContext`changedValues$$]}}, Typeset`size$$ = {
+    169., {135., 144.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = False, $CellContext`x$5082$$ = 
+    0, $CellContext`y$5083$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`changedValues$$ = 
+        Null, $CellContext`count$$ = Null, $CellContext`newValues$$ = 
+        Null, $CellContext`oldValues$$ = Null, $CellContext`times$$ = 
+        Null, $CellContext`x$$ = 0, $CellContext`y$$ = 0}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`x$$, $CellContext`x$5082$$, 0], 
+        Hold[$CellContext`y$$, $CellContext`y$5083$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, 
+      "Body" :> ($CellContext`newValues$$ = {$CellContext`x$$, \
+$CellContext`y$$}; $CellContext`changedValues$$ = Map[First, 
+          Select[
+           
+           Transpose[{{
+             "x", "y"}, $CellContext`newValues$$, $CellContext`oldValues$$}], 
+           Part[#, 2] =!= 
+           Part[#, 3]& ]]; $CellContext`oldValues$$ = \
+$CellContext`newValues$$; If[
+         Not[
+          IntegerQ[$CellContext`count$$]], $CellContext`count$$ = 0, 
+         Increment[$CellContext`count$$]]; If[
+         Not[
+          MatchQ[$CellContext`times$$, {
+            BlankSequence[
+            List]}]], $CellContext`times$$ = {}]; $CellContext`times$$ = Union[
+          AppendTo[$CellContext`times$$, {
+            UnixTime[], $CellContext`changedValues$$}]]; 
+       Column[{$CellContext`x$$, $CellContext`y$$, $CellContext`count$$, 
+          Grid[$CellContext`times$$]}]), 
+      "Specifications" :> {{$CellContext`x$$, 0, 1}, {$CellContext`y$$, 0, 
+         1}, {$CellContext`count$$, ControlType -> 
+         None}, {$CellContext`times$$, ControlType -> 
+         None}, {$CellContext`oldValues$$, ControlType -> 
+         None}, {$CellContext`newValues$$, ControlType -> 
+         None}, {$CellContext`changedValues$$, ControlType -> None}}, 
+      "Options" :> {TrackedSymbols :> {$CellContext`x$$, $CellContext`y$$}}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{381., {215., 224.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    Initialization:>({$CellContext`newValues$$ = {$CellContext`x$$, \
+$CellContext`y$$}, $CellContext`oldValues$$ = {$CellContext`x$$, \
+$CellContext`y$$}}; Typeset`initDone$$ = True),
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.7076115022705307`*^9, 3.7076115547430735`*^9}, {
+   3.7076116969193106`*^9, 3.707611702705456*^9}, 
+   3.707611739616762*^9},ExpressionUUID->"d6e9b2cb-6222-41a0-9ea7-\
+aa76c3375197"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["lets any user login", "Subsubsection",
+ CellChangeTimes->{{3.707646289742525*^9, 
+  3.7076462932751446`*^9}},ExpressionUUID->"0390bf26-86a3-41bf-988e-\
+73d201bc611c"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"If", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"TrueQ", "@", "authenticatedQ"}], ",", "\[IndentingNewLine]", 
+     "\"\<display content\>\"", ",", "\[IndentingNewLine]", 
+     RowBox[{"Column", "[", 
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputField", "[", 
+         RowBox[{
+          RowBox[{"Dynamic", "@", "user"}], ",", "String", ",", 
+          RowBox[{"ContinuousAction", "\[Rule]", "True"}]}], "]"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Button", "[", 
+         RowBox[{"\"\<Login\>\"", ",", 
+          RowBox[{"authenticatedQ", "=", 
+           RowBox[{
+            RowBox[{"StringLength", "@", "user"}], ">", "1"}]}]}], "]"}]}], 
+       "\[IndentingNewLine]", "}"}], "]"}]}], "\[IndentingNewLine]", "]"}], 
+   ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"user", ",", "0", ",", "1", ",", 
+     RowBox[{"ControlType", "\[Rule]", "None"}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"authenticatedQ", ",", "0", ",", "1", ",", 
+     RowBox[{"ControlType", "\[Rule]", "None"}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Initialization", "\[RuleDelayed]", 
+    RowBox[{"{", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"user", "=", "\"\<\>\""}], ",", "\[IndentingNewLine]", 
+      RowBox[{"authenticatedQ", "=", "False"}]}], "\[IndentingNewLine]", 
+     "}"}]}]}], "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.7076462588490057`*^9, 3.707646272508612*^9}, {
+  3.7076463553634224`*^9, 
+  3.7076463782770424`*^9}},ExpressionUUID->"02a1d201-a98a-4906-8390-\
+2fa99d3186e1"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`authenticatedQ$$ = 
+    False, $CellContext`user$$ = "", Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`user$$], 0, 1}, {
+      Hold[$CellContext`authenticatedQ$$], 0, 1}}, Typeset`size$$ = {
+    410., {32.5, 41.5}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = False, $CellContext`user$3243$$ = 
+    0, $CellContext`authenticatedQ$3244$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`authenticatedQ$$ = 0, $CellContext`user$$ = 
+        0}, "ControllerVariables" :> {
+        Hold[$CellContext`user$$, $CellContext`user$3243$$, 0], 
+        Hold[$CellContext`authenticatedQ$$, \
+$CellContext`authenticatedQ$3244$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> If[
+        TrueQ[$CellContext`authenticatedQ$$], "display content", 
+        Column[{
+          InputField[
+           Dynamic[$CellContext`user$$], String, ContinuousAction -> True], 
+          Button[
+          "Login", $CellContext`authenticatedQ$$ = 
+           StringLength[$CellContext`user$$] > 1]}]], 
+      "Specifications" :> {{$CellContext`user$$, 0, 1, ControlType -> 
+         None}, {$CellContext`authenticatedQ$$, 0, 1, ControlType -> None}}, 
+      "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{482., {78., 87.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    Initialization:>({$CellContext`user$$ = "", $CellContext`authenticatedQ$$ = 
+       False}; Typeset`initDone$$ = True),
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.7076462766970763`*^9, {3.7076463717746086`*^9, 
+   3.707646378808546*^9}},ExpressionUUID->"8bbaf5f9-da99-4d18-9597-\
+cc992124eaab"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["analytics for any students", "Subsubsection",
+ CellChangeTimes->{{3.7076463120522175`*^9, 
+  3.7076463401121817`*^9}},ExpressionUUID->"0992d7a9-d812-4b71-afb0-\
+2aac66bd64b8"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "this", " ", "tracks", " ", "any", " ", "time", " ", "anything", " ", 
+    "has", " ", "been", " ", "changed"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"If", "[", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"TrueQ", "@", "authenticatedQ"}], "\[IndentingNewLine]", ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"(*", 
+       RowBox[{"which", " ", "value", " ", "changed"}], "*)"}], 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"newValues", "=", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", "y"}], "}"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"changedValues", "=", 
+        RowBox[{"First", "/@", 
+         RowBox[{"Select", "[", 
+          RowBox[{
+           RowBox[{"Transpose", "@", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"\"\<x\>\"", ",", "\"\<y\>\""}], "}"}], ",", 
+              "newValues", ",", "oldValues"}], "}"}]}], ",", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"#", "[", 
+              RowBox[{"[", "2", "]"}], "]"}], "=!=", 
+             RowBox[{"#", "[", 
+              RowBox[{"[", "3", "]"}], "]"}]}], "&"}]}], "]"}]}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"oldValues", "=", "newValues"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"(*", 
+        RowBox[{
+        "record", " ", "data", " ", "when", " ", "interaction", " ", 
+         "happens"}], "*)"}], "\[IndentingNewLine]", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"!", 
+          RowBox[{"IntegerQ", "@", "count"}]}], ",", 
+         RowBox[{"count", "=", "0"}], ",", 
+         RowBox[{"count", "++"}]}], "]"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"!", 
+          RowBox[{"MatchQ", "[", 
+           RowBox[{"times", ",", 
+            RowBox[{"{", "__List", "}"}]}], "]"}]}], ",", 
+         RowBox[{"times", "=", 
+          RowBox[{"{", "}"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"times", "=", 
+        RowBox[{"Union", "@", 
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"times", ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"UnixTime", "[", "]"}], ",", "changedValues", ",", 
+             "user"}], "}"}]}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", 
+       RowBox[{"(*", 
+        RowBox[{
+         RowBox[{"regular", " ", "manipulate", " ", "body"}], " ", "-", " ", 
+         RowBox[{
+         "whatever", " ", "you", " ", "want", " ", "to", " ", "display"}]}], 
+        "*)"}], "\[IndentingNewLine]", 
+       RowBox[{"Column", "[", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", "y", ",", "count", ",", 
+          RowBox[{"Grid", "@", "times"}]}], "}"}], "]"}]}], 
+      "\[IndentingNewLine]", ",", "\[IndentingNewLine]", 
+      RowBox[{"Column", "[", 
+       RowBox[{"{", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"InputField", "[", 
+          RowBox[{
+           RowBox[{"Dynamic", "@", "user"}], ",", "String", ",", 
+           RowBox[{"ContinuousAction", "\[Rule]", "True"}]}], "]"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"Button", "[", 
+          RowBox[{"\"\<Login\>\"", ",", 
+           RowBox[{"authenticatedQ", "=", 
+            RowBox[{
+             RowBox[{"StringLength", "@", "user"}], ">", "1"}]}]}], "]"}], 
+         ",", "\[IndentingNewLine]", 
+         RowBox[{"{", 
+          RowBox[{"user", ",", "authenticatedQ"}], "}"}]}], 
+        "\[IndentingNewLine]", "}"}], "]"}]}], "\[IndentingNewLine]", "]"}], 
+    "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{"regular", " ", "manipulate", " ", "controls"}], "*)"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "0", ",", "1"}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", "0", ",", "1"}], "}"}], ",", "\[IndentingNewLine]", 
+    "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{"stuff", " ", "for", " ", "analytics"}], "*)"}], 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"count", ",", 
+      RowBox[{"ControlType", "\[Rule]", "None"}]}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"times", ",", 
+      RowBox[{"ControlType", "\[Rule]", "None"}]}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"oldValues", ",", 
+      RowBox[{"ControlType", "\[Rule]", "None"}]}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"newValues", ",", 
+      RowBox[{"ControlType", "\[Rule]", "None"}]}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"changedValues", ",", 
+      RowBox[{"ControlType", "\[Rule]", "None"}]}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"times", ",", 
+      RowBox[{"ControlType", "\[Rule]", "None"}]}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"user", ",", 
+      RowBox[{"ControlType", "\[Rule]", "None"}]}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"authenticatedQ", ",", 
+      RowBox[{"ControlType", "\[Rule]", "None"}]}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"TrackedSymbols", "\[RuleDelayed]", 
+     RowBox[{"{", 
+      RowBox[{"authenticatedQ", ",", "x", ",", "y"}], "}"}]}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Initialization", "\[RuleDelayed]", 
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"newValues", "=", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", "y"}], "}"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{"oldValues", "=", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", "y"}], "}"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{"user", "=", "None"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"users", "=", 
+        RowBox[{"{", 
+         RowBox[{"\"\<kyle\>\"", ",", "\"\<monica\>\""}], "}"}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"authenticatedQ", "=", "False"}]}], "\[IndentingNewLine]", 
+      "}"}]}]}], "\[IndentingNewLine]", "]"}]}]], "Input",
+ CellChangeTimes->{{3.7076460143756905`*^9, 3.7076460269012976`*^9}, {
+  3.7076461572357216`*^9, 3.7076461582363358`*^9}, {3.707646429839458*^9, 
+  3.7076464406128683`*^9}},ExpressionUUID->"df6458bb-d810-4d03-937f-\
+3c9444e77988"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`authenticatedQ$$ = 
+    False, $CellContext`changedValues$$ = {"y"}, $CellContext`count$$ = 
+    9, $CellContext`newValues$$ = {0, 0.389}, $CellContext`oldValues$$ = {
+    0, 0.389}, $CellContext`times$$ = {{1498657653, {}, "ky"}, {
+     1498657654, {"y"}, "ky"}, {
+     1498657655, {"y"}, "ky"}}, $CellContext`user$$ = None, $CellContext`x$$ =
+     0, $CellContext`y$$ = 0.389, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`x$$], 0, 1}, {
+      Hold[$CellContext`y$$], 0, 1}, {
+      Hold[$CellContext`count$$]}, {
+      Hold[$CellContext`times$$]}, {
+      Hold[$CellContext`oldValues$$]}, {
+      Hold[$CellContext`newValues$$]}, {
+      Hold[$CellContext`changedValues$$]}, {
+      Hold[$CellContext`times$$]}, {
+      Hold[$CellContext`user$$]}, {
+      Hold[$CellContext`authenticatedQ$$]}}, Typeset`size$$ = {
+    410., {45.5, 54.5}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = False, $CellContext`x$3404$$ = 
+    0, $CellContext`y$3405$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`authenticatedQ$$ = 
+        Null, $CellContext`changedValues$$ = Null, $CellContext`count$$ = 
+        Null, $CellContext`newValues$$ = Null, $CellContext`oldValues$$ = 
+        Null, $CellContext`times$$ = Null, $CellContext`user$$ = 
+        Null, $CellContext`x$$ = 0, $CellContext`y$$ = 0}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`x$$, $CellContext`x$3404$$, 0], 
+        Hold[$CellContext`y$$, $CellContext`y$3405$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> If[
+        TrueQ[$CellContext`authenticatedQ$$], $CellContext`newValues$$ = \
+{$CellContext`x$$, $CellContext`y$$}; $CellContext`changedValues$$ = 
+         Map[First, 
+           Select[
+            
+            Transpose[{{
+              "x", "y"}, $CellContext`newValues$$, $CellContext`oldValues$$}],
+             Part[#, 2] =!= 
+            Part[#, 3]& ]]; $CellContext`oldValues$$ = \
+$CellContext`newValues$$; If[
+          Not[
+           IntegerQ[$CellContext`count$$]], $CellContext`count$$ = 0, 
+          Increment[$CellContext`count$$]]; If[
+          Not[
+           MatchQ[$CellContext`times$$, {
+             BlankSequence[
+             List]}]], $CellContext`times$$ = {}]; $CellContext`times$$ = 
+         Union[
+           AppendTo[$CellContext`times$$, {
+             UnixTime[], $CellContext`changedValues$$, $CellContext`user$$}]]; 
+        Column[{$CellContext`x$$, $CellContext`y$$, $CellContext`count$$, 
+           Grid[$CellContext`times$$]}], 
+        Column[{
+          InputField[
+           Dynamic[$CellContext`user$$], String, ContinuousAction -> True], 
+          Button[
+          "Login", $CellContext`authenticatedQ$$ = 
+           StringLength[$CellContext`user$$] > 
+            1], {$CellContext`user$$, $CellContext`authenticatedQ$$}}]], 
+      "Specifications" :> {{$CellContext`x$$, 0, 1}, {$CellContext`y$$, 0, 
+         1}, {$CellContext`count$$, ControlType -> 
+         None}, {$CellContext`times$$, ControlType -> 
+         None}, {$CellContext`oldValues$$, ControlType -> 
+         None}, {$CellContext`newValues$$, ControlType -> 
+         None}, {$CellContext`changedValues$$, ControlType -> 
+         None}, {$CellContext`times$$, ControlType -> 
+         None}, {$CellContext`user$$, ControlType -> 
+         None}, {$CellContext`authenticatedQ$$, ControlType -> None}}, 
+      "Options" :> {
+       TrackedSymbols :> {$CellContext`authenticatedQ$$, $CellContext`x$$, \
+$CellContext`y$$}}, "DefaultOptions" :> {}],
+     ImageSizeCache->{482., {126., 135.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    Initialization:>({$CellContext`newValues$$ = {$CellContext`x$$, \
+$CellContext`y$$}, $CellContext`oldValues$$ = {$CellContext`x$$, \
+$CellContext`y$$}, $CellContext`user$$ = 
+       None, $CellContext`users = {
+        "kyle", "monica"}, $CellContext`authenticatedQ$$ = False}; 
+     Typeset`initDone$$ = True),
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.7076460278871384`*^9, 3.707646161714733*^9, 
+  3.7076464467785816`*^9},ExpressionUUID->"4c375ed5-6128-4601-a525-\
+ffea5b6d2331"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["lets only certain students in", "Subsubsection",
+ CellChangeTimes->{{3.707646297861232*^9, 
+  3.707646307895822*^9}},ExpressionUUID->"e262c0e4-e89d-4037-99fa-\
+6712e4bb2a91"],
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"If", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"TrueQ", "@", "authenticatedQ"}], ",", "\[IndentingNewLine]", 
+     "\"\<display content\>\"", ",", "\[IndentingNewLine]", 
+     RowBox[{"Column", "[", 
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputField", "[", 
+         RowBox[{
+          RowBox[{"Dynamic", "@", "user"}], ",", "String", ",", 
+          RowBox[{"ContinuousAction", "\[Rule]", "True"}]}], "]"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Button", "[", 
+         RowBox[{"\"\<Login\>\"", ",", 
+          RowBox[{"authenticatedQ", "=", 
+           RowBox[{"MemberQ", "[", 
+            RowBox[{"users", ",", "user"}], "]"}]}]}], "]"}]}], 
+       "\[IndentingNewLine]", "}"}], "]"}]}], "\[IndentingNewLine]", "]"}], 
+   ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"user", ",", "0", ",", "1", ",", 
+     RowBox[{"ControlType", "\[Rule]", "None"}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"users", ",", "0", ",", "1", ",", 
+     RowBox[{"ControlType", "\[Rule]", "None"}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"authenticatedQ", ",", "0", ",", "1", ",", 
+     RowBox[{"ControlType", "\[Rule]", "None"}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Initialization", "\[RuleDelayed]", 
+    RowBox[{"{", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"user", "=", "None"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"users", "=", 
+       RowBox[{"{", 
+        RowBox[{"\"\<kyle\>\"", ",", "\"\<monica\>\""}], "}"}]}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"authenticatedQ", "=", "False"}]}], "\[IndentingNewLine]", 
+     "}"}]}]}], "\[IndentingNewLine]", "]"}]], "Input",ExpressionUUID->\
+"e85ace91-806e-43c3-9fa0-7dead4a90a4b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["analytics for only certain students", "Subsubsection",
+ CellChangeTimes->{{3.7076463120522175`*^9, 
+  3.707646323390841*^9}},ExpressionUUID->"c2395e9c-6c7a-4442-9266-\
+2a1dc1c2756a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "this", " ", "tracks", " ", "any", " ", "time", " ", "anything", " ", 
+    "has", " ", "been", " ", "changed"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"If", "[", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"TrueQ", "@", "authenticatedQ"}], "\[IndentingNewLine]", ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"(*", 
+       RowBox[{"which", " ", "value", " ", "changed"}], "*)"}], 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"newValues", "=", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", "y"}], "}"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"changedValues", "=", 
+        RowBox[{"First", "/@", 
+         RowBox[{"Select", "[", 
+          RowBox[{
+           RowBox[{"Transpose", "@", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"\"\<x\>\"", ",", "\"\<y\>\""}], "}"}], ",", 
+              "newValues", ",", "oldValues"}], "}"}]}], ",", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"#", "[", 
+              RowBox[{"[", "2", "]"}], "]"}], "=!=", 
+             RowBox[{"#", "[", 
+              RowBox[{"[", "3", "]"}], "]"}]}], "&"}]}], "]"}]}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"oldValues", "=", "newValues"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"(*", 
+        RowBox[{
+        "record", " ", "data", " ", "when", " ", "interaction", " ", 
+         "happens"}], "*)"}], "\[IndentingNewLine]", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"!", 
+          RowBox[{"IntegerQ", "@", "count"}]}], ",", 
+         RowBox[{"count", "=", "0"}], ",", 
+         RowBox[{"count", "++"}]}], "]"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"!", 
+          RowBox[{"MatchQ", "[", 
+           RowBox[{"times", ",", 
+            RowBox[{"{", "__List", "}"}]}], "]"}]}], ",", 
+         RowBox[{"times", "=", 
+          RowBox[{"{", "}"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"times", "=", 
+        RowBox[{"Union", "@", 
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"times", ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"UnixTime", "[", "]"}], ",", "changedValues", ",", 
+             "user"}], "}"}]}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", 
+       RowBox[{"(*", 
+        RowBox[{
+         RowBox[{"regular", " ", "manipulate", " ", "body"}], " ", "-", " ", 
+         RowBox[{
+         "whatever", " ", "you", " ", "want", " ", "to", " ", "display"}]}], 
+        "*)"}], "\[IndentingNewLine]", 
+       RowBox[{"Column", "[", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", "y", ",", "count", ",", 
+          RowBox[{"Grid", "@", "times"}]}], "}"}], "]"}]}], 
+      "\[IndentingNewLine]", ",", "\[IndentingNewLine]", 
+      RowBox[{"Column", "[", 
+       RowBox[{"{", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"InputField", "[", 
+          RowBox[{
+           RowBox[{"Dynamic", "@", "user"}], ",", "String", ",", 
+           RowBox[{"ContinuousAction", "\[Rule]", "True"}]}], "]"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"Button", "[", 
+          RowBox[{"\"\<Login\>\"", ",", 
+           RowBox[{"authenticatedQ", "=", 
+            RowBox[{"MemberQ", "[", 
+             RowBox[{"users", ",", "user"}], "]"}]}]}], "]"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"{", 
+          RowBox[{"user", ",", "users", ",", "authenticatedQ"}], "}"}]}], 
+        "\[IndentingNewLine]", "}"}], "]"}]}], "\[IndentingNewLine]", "]"}], 
+    "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{"regular", " ", "manipulate", " ", "controls"}], "*)"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "0", ",", "1"}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", "0", ",", "1"}], "}"}], ",", "\[IndentingNewLine]", 
+    "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{"stuff", " ", "for", " ", "analytics"}], "*)"}], 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"count", ",", 
+      RowBox[{"ControlType", "\[Rule]", "None"}]}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"times", ",", 
+      RowBox[{"ControlType", "\[Rule]", "None"}]}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"oldValues", ",", 
+      RowBox[{"ControlType", "\[Rule]", "None"}]}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"newValues", ",", 
+      RowBox[{"ControlType", "\[Rule]", "None"}]}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"changedValues", ",", 
+      RowBox[{"ControlType", "\[Rule]", "None"}]}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"times", ",", 
+      RowBox[{"ControlType", "\[Rule]", "None"}]}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"user", ",", 
+      RowBox[{"ControlType", "\[Rule]", "None"}]}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"users", ",", 
+      RowBox[{"ControlType", "\[Rule]", "None"}]}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"authenticatedQ", ",", 
+      RowBox[{"ControlType", "\[Rule]", "None"}]}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"TrackedSymbols", "\[RuleDelayed]", 
+     RowBox[{"{", 
+      RowBox[{"authenticatedQ", ",", "x", ",", "y"}], "}"}]}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Initialization", "\[RuleDelayed]", 
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"newValues", "=", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", "y"}], "}"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{"oldValues", "=", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", "y"}], "}"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{"user", "=", "None"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"users", "=", 
+        RowBox[{"{", 
+         RowBox[{"\"\<kyle\>\"", ",", "\"\<monica\>\""}], "}"}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"authenticatedQ", "=", "False"}]}], "\[IndentingNewLine]", 
+      "}"}]}]}], "\[IndentingNewLine]", "]"}]}]], "Input",
+ CellChangeTimes->{{3.7076460143756905`*^9, 3.7076460269012976`*^9}, {
+  3.7076461572357216`*^9, 
+  3.7076461582363358`*^9}},ExpressionUUID->"4f1d0f7d-b170-4241-9ff3-\
+a7a17a7cfbb0"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`authenticatedQ$$ = 
+    False, $CellContext`changedValues$$ = {"x"}, $CellContext`count$$ = 
+    63, $CellContext`newValues$$ = {0.676, 
+    0.257}, $CellContext`oldValues$$ = {0.676, 
+    0.257}, $CellContext`times$$ = {{1498657368, {"x"}, "kyle"}, {
+     1498657370, {"y"}, "kyle"}, {1498657371, {"y"}, "kyle"}, {
+     1498657372, {"x"}, "kyle"}, {
+     1498657373, {"x"}, "kyle"}}, $CellContext`user$$ = 
+    None, $CellContext`users$$ = {"kyle", "monica"}, $CellContext`x$$ = 
+    0.676, $CellContext`y$$ = 0.257, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`x$$], 0, 1}, {
+      Hold[$CellContext`y$$], 0, 1}, {
+      Hold[$CellContext`count$$]}, {
+      Hold[$CellContext`times$$]}, {
+      Hold[$CellContext`oldValues$$]}, {
+      Hold[$CellContext`newValues$$]}, {
+      Hold[$CellContext`changedValues$$]}, {
+      Hold[$CellContext`times$$]}, {
+      Hold[$CellContext`user$$]}, {
+      Hold[$CellContext`users$$]}, {
+      Hold[$CellContext`authenticatedQ$$]}}, Typeset`size$$ = {
+    410., {46., 55.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = False, $CellContext`x$3004$$ = 
+    0, $CellContext`y$3005$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`authenticatedQ$$ = 
+        Null, $CellContext`changedValues$$ = Null, $CellContext`count$$ = 
+        Null, $CellContext`newValues$$ = Null, $CellContext`oldValues$$ = 
+        Null, $CellContext`times$$ = Null, $CellContext`user$$ = 
+        Null, $CellContext`users$$ = Null, $CellContext`x$$ = 
+        0, $CellContext`y$$ = 0}, "ControllerVariables" :> {
+        Hold[$CellContext`x$$, $CellContext`x$3004$$, 0], 
+        Hold[$CellContext`y$$, $CellContext`y$3005$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> If[
+        TrueQ[$CellContext`authenticatedQ$$], $CellContext`newValues$$ = \
+{$CellContext`x$$, $CellContext`y$$}; $CellContext`changedValues$$ = 
+         Map[First, 
+           Select[
+            
+            Transpose[{{
+              "x", "y"}, $CellContext`newValues$$, $CellContext`oldValues$$}],
+             Part[#, 2] =!= 
+            Part[#, 3]& ]]; $CellContext`oldValues$$ = \
+$CellContext`newValues$$; If[
+          Not[
+           IntegerQ[$CellContext`count$$]], $CellContext`count$$ = 0, 
+          Increment[$CellContext`count$$]]; If[
+          Not[
+           MatchQ[$CellContext`times$$, {
+             BlankSequence[
+             List]}]], $CellContext`times$$ = {}]; $CellContext`times$$ = 
+         Union[
+           AppendTo[$CellContext`times$$, {
+             UnixTime[], $CellContext`changedValues$$, $CellContext`user$$}]]; 
+        Column[{$CellContext`x$$, $CellContext`y$$, $CellContext`count$$, 
+           Grid[$CellContext`times$$]}], 
+        Column[{
+          InputField[
+           Dynamic[$CellContext`user$$], String, ContinuousAction -> True], 
+          Button[
+          "Login", $CellContext`authenticatedQ$$ = 
+           MemberQ[$CellContext`users$$, $CellContext`user$$]], \
+{$CellContext`user$$, $CellContext`users$$, $CellContext`authenticatedQ$$}}]],
+       "Specifications" :> {{$CellContext`x$$, 0, 1}, {$CellContext`y$$, 0, 
+         1}, {$CellContext`count$$, ControlType -> 
+         None}, {$CellContext`times$$, ControlType -> 
+         None}, {$CellContext`oldValues$$, ControlType -> 
+         None}, {$CellContext`newValues$$, ControlType -> 
+         None}, {$CellContext`changedValues$$, ControlType -> 
+         None}, {$CellContext`times$$, ControlType -> 
+         None}, {$CellContext`user$$, ControlType -> 
+         None}, {$CellContext`users$$, ControlType -> 
+         None}, {$CellContext`authenticatedQ$$, ControlType -> None}}, 
+      "Options" :> {
+       TrackedSymbols :> {$CellContext`authenticatedQ$$, $CellContext`x$$, \
+$CellContext`y$$}}, "DefaultOptions" :> {}],
+     ImageSizeCache->{482., {126., 135.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    Initialization:>({$CellContext`newValues$$ = {$CellContext`x$$, \
+$CellContext`y$$}, $CellContext`oldValues$$ = {$CellContext`x$$, \
+$CellContext`y$$}, $CellContext`user$$ = 
+       None, $CellContext`users$$ = {
+        "kyle", "monica"}, $CellContext`authenticatedQ$$ = False}; 
+     Typeset`initDone$$ = True),
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.7076460278871384`*^9, 
+  3.707646161714733*^9},ExpressionUUID->"86733275-703f-4c3a-aab9-\
+4e8237ad3b8d"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{759, 527},
+WindowMargins->{{Automatic, 252}, {65, Automatic}},
+Magnification:>1.5 Inherited,
+FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (April 27, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 173, 3, 58, "Subsubsection", "ExpressionUUID" -> \
+"88ccbf9b-960f-4731-9bbc-558874e0cc18"],
+Cell[CellGroupData[{
+Cell[778, 29, 2524, 61, 482, "Input", "ExpressionUUID" -> \
+"e1fc190b-0a71-4a5a-a81f-b9b27678c3de"],
+Cell[3305, 92, 3041, 61, 490, "Output", "ExpressionUUID" -> \
+"ebded3e3-47ee-4403-ac0d-22eeeef98f0b"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6395, 159, 244, 4, 58, "Subsubsection", "ExpressionUUID" -> \
+"fce013f2-eb4d-448f-b032-04ed6d8a07ae"],
+Cell[CellGroupData[{
+Cell[6664, 167, 4588, 118, 1033, "Input", "ExpressionUUID" -> \
+"ef0f520a-a9f9-4700-8150-12191f087a11"],
+Cell[11255, 287, 4067, 82, 464, "Output", "ExpressionUUID" -> \
+"d6e9b2cb-6222-41a0-9ea7-aa76c3375197"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15371, 375, 172, 3, 58, "Subsubsection", "ExpressionUUID" -> \
+"0353e0d5-8cfc-4ecd-aa9e-c2759356e2b0"],
+Cell[CellGroupData[{
+Cell[15568, 382, 1707, 39, 540, "Input", "ExpressionUUID" -> \
+"074defb1-4180-4b74-aa40-cf4a43d2e007"],
+Cell[17278, 423, 2455, 51, 190, "Output", "ExpressionUUID" -> \
+"8bbaf5f9-da99-4d18-9597-cc992124eaab"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19782, 480, 181, 3, 58, "Subsubsection", "ExpressionUUID" -> \
+"b254b829-60ed-4877-bbcb-ba8113985d2e"],
+Cell[CellGroupData[{
+Cell[19988, 487, 6410, 159, 1584, "Input", "ExpressionUUID" -> \
+"cc96c2f3-7302-4666-a631-9570336dfcc2"],
+Cell[26401, 648, 4925, 101, 286, "Output", "ExpressionUUID" -> \
+"4c375ed5-6128-4601-a525-ffea5b6d2331"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31375, 755, 180, 3, 58, "Subsubsection", "ExpressionUUID" -> \
+"d4d6d17e-f9b2-4142-86eb-86ea84cdead8"],
+Cell[31558, 760, 1890, 44, 598, "Input", "ExpressionUUID" -> \
+"1995cd6b-833f-4552-8b79-3e36ed4772fa"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[33485, 809, 188, 3, 58, "Subsubsection", "ExpressionUUID" -> \
+"11bf7595-fd29-4b84-96d3-0854645abe08"],
+Cell[CellGroupData[{
+Cell[33698, 816, 6519, 163, 1613, "Input", "ExpressionUUID" -> \
+"08d75827-4d95-4c37-a642-15da1ba3c7f5"],
+Cell[40220, 981, 5187, 106, 286, "Output", "ExpressionUUID" -> \
+"86733275-703f-4c3a-aab9-4e8237ad3b8d"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
