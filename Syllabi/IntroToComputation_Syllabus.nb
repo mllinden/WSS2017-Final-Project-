@@ -1,0 +1,657 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='WolframDesktop 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       161,          7]
+NotebookDataLength[     27464,        649]
+NotebookOptionsPosition[     17203,        427]
+NotebookOutlinePosition[     23517,        566]
+CellTagsIndexPosition[     23474,        563]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Introduction to Computational Thinking", "Title",
+ CellChangeTimes->{{3.700774153171832*^9, 3.700774159196458*^9}, {
+  3.705104157104324*^9, 3.7051041574063416`*^9}, {3.70568519155404*^9, 
+  3.705685209964157*^9}, {3.7077275395225105`*^9, 
+  3.7077275448074074`*^9}},ExpressionUUID->"5427fab8-42d7-46e4-8772-\
+01a3e1e763a2"],
+
+Cell["\<\
+Computational thinking is a way of thinking that can be easily translated \
+into a language a computer can understand such that the computer can help you \
+answer questions and solve problems.  This course will explore key principles \
+of computational thinking including computability, data, visualization, \
+analysis, and interpretation.  Examples will be drawn from across the \
+disciplines, including areas outside of the STEM fields.  Students will also \
+explore the history of computational thinking and develop an appreciation of \
+the importance of computational thinking for the future.  No background \
+experience with computer programming is expected.  Students will learn \
+through the use of the Wolfram language.  At the conclusion of the course, \
+students will be able to turn an idea into something computational.\
+\>", "Abstract",
+ CellChangeTimes->{{3.700774172671139*^9, 3.700774220850109*^9}, {
+  3.700778895632181*^9, 3.700778896308676*^9}, {3.7051041615775795`*^9, 
+  3.705104170817108*^9}, {3.7077275481625476`*^9, 3.707727550741748*^9}, {
+  3.7077275906045465`*^9, 3.7077280607360687`*^9}, {3.707751865205551*^9, 
+  3.70775191004167*^9}},ExpressionUUID->"d559430b-dd84-4e61-b6de-\
+9659782204bf"],
+
+Cell[CellGroupData[{
+
+Cell["By the end of the course:", "Section",
+ CellChangeTimes->{{3.7077284510502024`*^9, 
+  3.7077284719913893`*^9}},ExpressionUUID->"53e65e2e-c7b8-4267-8aca-\
+6d6c02b45dd6"],
+
+Cell["\<\
+Students will be able to define computational thinking and explain the \
+underlying principles of computability and computational thinking.\
+\>", "Direction",
+ CellChangeTimes->{{3.7077285451203794`*^9, 
+  3.7077285604938498`*^9}},ExpressionUUID->"bcf7a291-0e02-4fcd-88fe-\
+dae2da9a19e2"],
+
+Cell["\<\
+Students will understand what is meant by \[OpenCurlyDoubleQuote]data\
+\[CloseCurlyDoubleQuote], where data come from, and how to get data into \
+useful formats for computation.\
+\>", "Direction",
+ CellChangeTimes->{{3.707728592908603*^9, 3.7077286319317293`*^9}, 
+   3.7077288547570925`*^9, {3.7077332960257716`*^9, 
+   3.707733302687974*^9}},ExpressionUUID->"ba96f004-1c46-4504-a5b1-\
+25f03fd76a81"],
+
+Cell["\<\
+Students will understand standard forms of data visualization, be able to \
+interpret data visualizations, and be able to create data visualizations.\
+\>", "Direction",
+ CellChangeTimes->{{3.707728636788063*^9, 3.707728715178816*^9}, {
+  3.7077287910803757`*^9, 3.7077288066522183`*^9}, {3.707728947982373*^9, 
+  3.707728962924014*^9}},ExpressionUUID->"2ce69b54-a7ae-47a9-8464-\
+934b58db01b7"],
+
+Cell["\<\
+Students will understand standard methods of data analysis, be able to apply \
+analysis methods to data, and be able to interpret analyzed data.\
+\>", "Direction",
+ CellChangeTimes->{{3.7077287738114443`*^9, 3.707728819401624*^9}, {
+  3.7077289705407686`*^9, 
+  3.7077290081308413`*^9}},ExpressionUUID->"5badedca-e437-4ea8-8c2d-\
+1b3d0c101229"],
+
+Cell["\<\
+Students will understand standard methods and uses for machine learning and \
+be able to apply machine learning techniques.\
+\>", "Direction",
+ CellChangeTimes->{{3.7077288812559495`*^9, 3.7077289395105915`*^9}, {
+  3.707729017169763*^9, 
+  3.70772901966993*^9}},ExpressionUUID->"440db77f-f81f-46a4-80c8-\
+6b1cc17bcdbd"],
+
+Cell["\<\
+Students will explore how biases develop in computational thinking and will \
+evaluate the role for computational thinking in the democratic process.\
+\>", "Direction",
+ CellChangeTimes->{{3.7077287252296534`*^9, 
+  3.7077287645646744`*^9}},ExpressionUUID->"dec20c28-d36e-4e24-9894-\
+dc980f130668"],
+
+Cell["\<\
+Students will turn their own ideas into something computational!\
+\>", "Direction",
+ CellChangeTimes->{{3.707729055382732*^9, 
+  3.7077290739677143`*^9}},ExpressionUUID->"d02b8a85-6da9-4c47-a213-\
+30387613ef34"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Course Format and Assessment", "Section",
+ CellChangeTimes->{{3.700774708350976*^9, 3.700774714085747*^9}, {
+  3.7051042493566003`*^9, 3.7051042513157125`*^9}, {3.705686166481989*^9, 
+  3.7056861672865133`*^9}, {3.7077291050036297`*^9, 3.707729108235392*^9}, {
+  3.7077300547174463`*^9, 3.707730057565081*^9}, {3.707732215533884*^9, 
+  3.7077322283253736`*^9}},ExpressionUUID->"fea2deae-064a-4940-9789-\
+cd4897955561"],
+
+Cell[TextData[{
+ "Note from Monica: This can guide what resources one would create to design \
+this course.  Is the course design perhaps a set of notebooks with student \
+and teacher versions, such that at the end of the course, the student has \
+created their own book (in the style described by Craig Carter)?  I think \
+this could be successful. I am imagining three types of notebooks:\n\n",
+ StyleBox["in-class notebooks",
+  FontColor->RGBColor[0.6, 0.4, 0.2]],
+ " (in both \[OpenCurlyDoubleQuote]follow along with instructor\
+\[CloseCurlyDoubleQuote] versions and \[OpenCurlyDoubleQuote]watch the \
+instructor and download later\[CloseCurlyDoubleQuote] versions\n\t \n",
+ StyleBox["exploration notebooks",
+  FontColor->RGBColor[0.6, 0.4, 0.2]],
+ " - which are for practice and scaffolding, and thus \tshould still use the \
+computational essay format to help reinforce that) (~10 per semester)\t\n\t \n\
+",
+ StyleBox["project notebooks",
+  FontColor->RGBColor[0.6, 0.4, 0.2]],
+ " - which are provide as a template and allow the student to engage in a \
+more complete process of creating the computational essay and engaging with \
+the topic (~4 per semester)\n\t\nThe goal would be to create the exploration \
+and project notebooks such that, if the students complete them, they meet the \
+course objectives. \n\t\nIt might be instructive to ",
+ StyleBox["create rubrics",
+  FontColor->RGBColor[0, 0, 1]],
+ " for assignments.  These, technically, would help instructors think about \
+how they will assign grades.  But more importantly,  they will provide guides \
+for the types of feedback you think are most crucial for the students.  They \
+also give you the opportunity to align the assignments with the course \
+objectives.\t"
+}], "Abstract",
+ CellChangeTimes->{{3.700774172671139*^9, 3.700774220850109*^9}, {
+  3.700778895632181*^9, 3.700778896308676*^9}, {3.7051041615775795`*^9, 
+  3.705104170817108*^9}, {3.7077275481625476`*^9, 3.707727550741748*^9}, {
+  3.7077275906045465`*^9, 3.7077280607360687`*^9}, {3.707730899752742*^9, 
+  3.707731269952855*^9}, {3.7077313538573694`*^9, 3.707731464953348*^9}, {
+  3.707731515244499*^9, 3.707731573360005*^9}, {3.707732232469709*^9, 
+  3.707732360264844*^9}, {3.7077325766068296`*^9, 3.7077326000425453`*^9}, {
+  3.707733336625174*^9, 
+  3.7077334291464014`*^9}},ExpressionUUID->"f4dea09a-cb86-4b17-8ef1-\
+7f0b6712b69d"],
+
+Cell[TextData[{
+ "The format for the course is highly interactive.  Students will learn \
+computational thinking through the process of engaging in this type of \
+thinking themselves.  Interactive computational notebooks will allow students \
+to explore examples of computational thinking and to develop their own.  \
+Students are expected to bring laptops to class. ",
+ StyleBox[" ",
+  FontColor->RGBColor[0, 1, 0]],
+ StyleBox["(You should have Wolfram Desktop installed on your computer.  Here\
+\[CloseCurlyQuote]s a link, info for setting up an account, etc.)",
+  FontColor->RGBColor[0.5, 0, 0.5]]
+}], "Text",
+ CellChangeTimes->{{3.707729367926915*^9, 3.7077293692668657`*^9}, {
+  3.707730045134487*^9, 3.707730218773179*^9}, {3.7077303461854057`*^9, 
+  3.7077303828288608`*^9}, {3.7077315960221233`*^9, 
+  3.7077316104418187`*^9}},ExpressionUUID->"787f60f9-4244-46db-bbd3-\
+d272926924eb"],
+
+Cell["\<\
+Throughout the course, students will learn the format of computational \
+essays.  The computational essay is a clear and succinct format that allows \
+students to engage in and communicate and step-by-step approach to problem \
+solving.  Course assignments, including \[OpenCurlyDoubleQuote]Explorations\
+\[CloseCurlyDoubleQuote] and \[OpenCurlyDoubleQuote]Projects\
+\[CloseCurlyDoubleQuote] (see below) will be submitted as computational \
+essays.  \
+\>", "Text",
+ CellChangeTimes->{{3.707730253873666*^9, 3.707730334082982*^9}, {
+  3.707730421898175*^9, 
+  3.707730573481063*^9}},ExpressionUUID->"645f9031-0ac3-4671-a0bd-\
+ee176d3cc417"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Scheduling", "Section",
+ CellChangeTimes->{{3.708254956599043*^9, 
+  3.7082549589387474`*^9}},ExpressionUUID->"973857e1-dfec-46d6-87db-\
+798a2fb2c863"],
+
+Cell["\<\
+Without knowing the nature of the projects and the amount of scaffolding \
+required, it is hard to imagine how the course will be scheduled.  But in \
+general, one approach might be as follows.\
+\>", "Text",
+ CellChangeTimes->{{3.7082549631469054`*^9, 
+  3.7082550095831947`*^9}},ExpressionUUID->"cfce40ed-c9fb-4054-95b0-\
+84d69a852a78"],
+
+Cell["\<\
+Design projects that can be completed in 1-2 weeks, and assign one for every \
+3-4 week unit.  You can make the projects easier or more challenging by \
+providing more or less code. \
+\>", "Direction",
+ CellChangeTimes->{{3.7082550123847885`*^9, 
+  3.708255092732945*^9}},ExpressionUUID->"7f60eeb5-4c0d-42ff-b785-\
+12b7fe47763a"],
+
+Cell["\<\
+The students will do Explorations on weeks when projects aren\
+\[CloseCurlyQuote]t due.\
+\>", "Direction",
+ CellChangeTimes->{{3.7082550837220726`*^9, 
+  3.70825513974096*^9}},ExpressionUUID->"f48f8f99-7145-4fa9-b379-\
+e5e2f1d5343e"],
+
+Cell["\<\
+One week of class is about 12 hours of student time (both inside and outside \
+of class).  So one breakdown might be that per project students will have 9 \
+hours of in-class time, 6 hours to spend on each of 3 explorations \
+scaffolding the project, and 9 hours to complete the project.  This assumes a \
+4 week unit and 3 hours of in-class time per week.\
+\>", "Direction",
+ CellChangeTimes->{{3.708255143496232*^9, 
+  3.708255330306988*^9}},ExpressionUUID->"d53b1924-3b4d-4cd0-990f-\
+2bd8bd3e721a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Suggestions for course structure/topics", "FurtherExplorationSection",
+ CellChangeTimes->{{3.70077612322993*^9, 3.7007761320921593`*^9}, {
+  3.7007787731699142`*^9, 3.70077877480995*^9}, {3.7077323918245707`*^9, 
+  3.707732401922858*^9}},ExpressionUUID->"b10d5765-ad23-40a8-ad47-\
+38b7842c6175"],
+
+Cell["\<\
+While you described a two-semester sequence, I think starting with a \
+one-semester treatment is more informative.  You also listed lots of topics.  \
+I propose the following process to arrive at the actual course \
+structure/ordering.\
+\>", "FurtherExploration",
+ CellChangeTimes->{{3.7007765492418337`*^9, 3.7007765636102467`*^9}, {
+  3.705104213701561*^9, 3.7051042224510612`*^9}, {3.7051697227932177`*^9, 
+  3.7051697367862177`*^9}, {3.7056847753333597`*^9, 3.7056847788413363`*^9}, {
+  3.705686193025524*^9, 3.7056861967297907`*^9}, {3.707732403839843*^9, 
+  3.7077324949040017`*^9}},ExpressionUUID->"c27fc361-4f19-4356-bd42-\
+8fff1a8397e9"],
+
+Cell["\<\
+If you edit and determine the objectives, and then create a series of \
+Explorations and Projects that you would like the students to complete to \
+meet these objectives, you will have a great outline of what needs to be \
+covered in the class.  The in-class lectures would become the scaffolds for \
+the explorations and projects, such that the students have the tools they \
+need to complete them.
+
+One additional way to approach topics and content is to consider the \
+pre-existing misconceptions about computational thinking and see how you can \
+make sure you are addressing those head-on.
+
+Topics could include\
+\>", "FurtherExploration",
+ CellChangeTimes->{{3.7007765492418337`*^9, 3.7007765636102467`*^9}, {
+  3.705104213701561*^9, 3.7051042224510612`*^9}, {3.705105582902875*^9, 
+  3.7051055862950687`*^9}, {3.705686185124048*^9, 3.705686188552953*^9}, {
+  3.707732499288824*^9, 3.707732560287489*^9}, {3.7077326119394064`*^9, 
+  3.707732656557143*^9}, {3.707733151962125*^9, 3.7077331577627788`*^9}, {
+  3.7077331963074865`*^9, 
+  3.7077332226850004`*^9}},ExpressionUUID->"df0d81d5-b79b-48ca-bb5c-\
+681145b8384c"],
+
+Cell["\<\
+What is computational thinking?
+\tWhat is conceivably possible with computation?\
+\>", "Direction",
+ CellChangeTimes->{{3.707732675458952*^9, 3.707732714979915*^9}, {
+  3.7082548865983086`*^9, 
+  3.7082548875592775`*^9}},ExpressionUUID->"776037b0-bde3-43bc-a2e5-\
+76ae42275faa"],
+
+Cell["What does the computational future of each field look like?", \
+"Direction",
+ CellChangeTimes->{{3.707732718433754*^9, 
+  3.7077327365568457`*^9}},ExpressionUUID->"78634d16-310c-4345-81ca-\
+f1a2ee9cf3d2"],
+
+Cell["What are computational questions?", "Direction",
+ CellChangeTimes->{{3.707732753144049*^9, 
+  3.7077327597094812`*^9}},ExpressionUUID->"971845de-62cf-4329-a857-\
+91f8d4e41993"],
+
+Cell["\<\
+Data
+\tWhat are data?
+\tWhere do data come from?
+\tHow do data get into a useful form? (How do you number letters? Data \
+wrangling\
+\>", "Direction",
+ CellChangeTimes->{{3.707732764147359*^9, 
+  3.707732823503748*^9}},ExpressionUUID->"26e291fd-e23c-4912-80f2-\
+3b89f0e2bf24"],
+
+Cell["\<\
+Visualization
+\tWhat are the typical forms of visualization?
+\tHow can visualizations be biased?
+\tWhat makes a visualization \[OpenCurlyDoubleQuote]good\
+\[CloseCurlyDoubleQuote] or \[OpenCurlyDoubleQuote]useful\
+\[CloseCurlyDoubleQuote]?\
+\>", "Direction",
+ CellChangeTimes->{{3.7077328271535606`*^9, 
+  3.70773287363013*^9}},ExpressionUUID->"d9edea44-0ac2-4de7-bded-\
+5db71987db70"],
+
+Cell["\<\
+Analysis
+\tWhat are some forms of data analysis?
+\tWhat does it mean to get probabilistic results?
+\tHow can analysis be biased?
+\tHow do you visualize analyzed data? What might be lost or gained?
+\tHow do you know which type of analysis to do?
+\tHow can you be systematic with analysis?
+\t\
+\>", "Direction",
+ CellChangeTimes->{{3.707732884119097*^9, 
+  3.707732958387374*^9}},ExpressionUUID->"66a7c882-1ca4-4b9d-ad33-\
+436865faf651"],
+
+Cell["\<\
+Interpretation
+\tHow do you interpret analysis?
+\tHow can you convey your data interpretation clearly?
+\tWhat are the biases that come up with data interpretation?
+\tWhat is the role for the computer in data interpretation?\
+\>", "Direction",
+ CellChangeTimes->{{3.7077329611313763`*^9, 
+  3.7077330058970947`*^9}},ExpressionUUID->"40f8cc06-d591-47e8-ba4c-\
+53fe51af916a"],
+
+Cell["\<\
+Machine Learning
+\tWhat is machine learning?
+\tWhy do you use machine learning? (e.g. optimization)
+\tWhat are examples of machine learning?
+\tWhat do you need to provide for machine learning?
+\tWhen are the drawbacks to machine learning?\
+\>", "Direction",
+ CellChangeTimes->{{3.707733012117755*^9, 
+  3.707733081578993*^9}},ExpressionUUID->"438293ee-1354-4a24-aea9-\
+83cc4a3e56b3"],
+
+Cell["\<\
+What is a model?
+\tWhat assumptions do models make?
+\tHow do models facilitate prediction?
+\tWhen are models useful?\
+\>", "Direction",
+ CellChangeTimes->{{3.7077330852719355`*^9, 
+  3.707733105451771*^9}},ExpressionUUID->"a38b94f4-acc4-4cb7-aa1b-\
+271bdbd80a3a"],
+
+Cell["\<\
+What is a simulation?
+\tWhat assumptions do simulations make?
+\tHow can simulations help you solve problems?
+\tWhen are simulations useful?\
+\>", "Direction",
+ CellChangeTimes->{{3.7077331077673655`*^9, 
+  3.7077331270572023`*^9}},ExpressionUUID->"61897782-e76a-4fee-be7d-\
+e37ec36ea5d0"],
+
+Cell["\<\
+What is the history of computational thinking?
+\tWhat does the history tell us about the future?\
+\>", "Direction",
+ CellChangeTimes->{{3.707733165566372*^9, 
+  3.7077331892399607`*^9}},ExpressionUUID->"93396f0d-5cf3-4b25-ad27-\
+3ca9a38cdd8d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Authorship information", "AuthorshipSection",
+ CellChangeTimes->{{3.705105762145127*^9, 
+  3.7051057665253773`*^9}},ExpressionUUID->"dd2af63a-d58d-460a-b905-\
+b87fb381357c"],
+
+Cell["Monica Linden", "Authorship",
+ CellChangeTimes->{{3.7051057700535793`*^9, 3.7051057808261957`*^9}, {
+  3.7077332275464067`*^9, 
+  3.707733231358347*^9}},ExpressionUUID->"e8968544-93b7-4f8f-a4c1-\
+81068b246725"],
+
+Cell["June 29, 2017", "Authorship",
+ CellChangeTimes->{{3.705105786521521*^9, 3.7051057998362827`*^9}, {
+  3.707733235940854*^9, 
+  3.7077332434108095`*^9}},ExpressionUUID->"c7495659-8ed5-4980-aa0e-\
+e9a159c465bf"],
+
+Cell["monica_linden@brown.edu", "Authorship",
+ CellChangeTimes->{{3.7051058070526953`*^9, 3.705105841815684*^9}, {
+  3.7077332477796497`*^9, 
+  3.707733255285761*^9}},ExpressionUUID->"599fe3b9-7c5d-4a1b-962e-\
+19bd42598d98"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1440, 877},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+DockedCells->Cell[
+  BoxData[
+   TagBox[
+    GridBox[{{
+       ItemBox["\"\"", ItemSize -> 0.2, StripOnInput -> False], 
+       DynamicModuleBox[{}, 
+        ActionMenuBox[
+        "\"Insert\"", {
+         "\"Section\"" :> 
+          Module[{$CellContext`nb = ButtonNotebook[]}, 
+            Exploration`MoveCursorAfterCellPosition[$CellContext`nb]; 
+            NotebookWrite[$CellContext`nb, 
+              Cell[
+               CellGroupData[{
+                 Cell["XXXX", "Section"], 
+                 Cell["XXXX", "Text"], 
+                 Cell["XXXX", "Direction"], 
+                 Cell[
+                  BoxData["XXXX"], "Input"]}, Open]], All]; 
+            SelectionMove[$CellContext`nb, Before, Cell]; 
+            SelectionMove[$CellContext`nb, Next, Cell]; 
+            SelectionMove[$CellContext`nb, All, CellContents]], Delimiter, 
+          "\"Text\"" :> 
+          Module[{$CellContext`nb = ButtonNotebook[]}, 
+            Exploration`MoveCursorAfterCellPosition[$CellContext`nb]; 
+            NotebookWrite[$CellContext`nb, 
+              Cell["XXXX", "Text"], All]; 
+            SelectionMove[$CellContext`nb, All, CellContents]], 
+          "\"Direction\"" :> 
+          Module[{$CellContext`nb = ButtonNotebook[]}, 
+            Exploration`MoveCursorAfterCellPosition[$CellContext`nb]; 
+            NotebookWrite[$CellContext`nb, 
+              Cell["XXXX", "Direction"], All]; 
+            SelectionMove[$CellContext`nb, All, CellContents]], 
+          "\"Further Exploration\"" :> 
+          Module[{$CellContext`nb = ButtonNotebook[]}, 
+            Exploration`MoveCursorAfterCellPosition[$CellContext`nb]; 
+            NotebookWrite[$CellContext`nb, 
+              Cell["XXXX", "FurtherExploration"], All]; 
+            SelectionMove[$CellContext`nb, All, CellContents]]}, Method -> 
+         "Queued", Appearance -> "PopupMenu", FrameMargins -> 2.4], 
+        Initialization :> (Exploration`MoveCursorAfterCellPosition[
+           Pattern[$CellContext`nb, 
+            Blank[]]] := Which[
+           MatchQ[
+            Developer`CellInformation[$CellContext`nb], {
+             Repeated[{
+               BlankSequence[], "CursorPosition" -> "CellBracket", 
+               BlankSequence[]}]}], 
+           SelectionMove[$CellContext`nb, After, Cell], 
+           Developer`CellInformation[$CellContext`nb] =!= $Failed, 
+           Module[{$CellContext`lnkre}, 
+             While[(LinkWrite[$ParentLink, 
+                 
+                 FrontEnd`CellInformation[$CellContext`nb]]; \
+$CellContext`lnkre = LinkRead[$ParentLink]); 
+              And[$CellContext`lnkre =!= $Failed, 
+                Not[
+                 MemberQ[
+                  ReplaceAll["CursorPosition", $CellContext`lnkre], 
+                  "CellBracket"]]], 
+              FrontEndExecute[
+               
+               FrontEnd`SelectionMove[$CellContext`nb, All, Cell, AutoScroll -> 
+                False]]]]; SelectionMove[$CellContext`nb, After, Cell]]), 
+        DynamicModuleValues :> {}], 
+       ItemBox["\"\"", ItemSize -> Fit, StripOnInput -> False], 
+       ButtonBox["\"Sample\"", ButtonFunction :> NotebookOpen[
+          
+          FileNameJoin[{$UserBaseDirectory, "Applications", 
+            "SummerSchoolTemplates", "FrontEnd", "TextResources", 
+            "TopicExplorationExample.nb"}]], Appearance -> Automatic, 
+        Evaluator -> Automatic, Method -> "Queued"]}}, AutoDelete -> False, 
+     GridBoxItemSize -> {
+      "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]], 
+  "DockedCell"],
+CellLabelAutoDelete->False,
+FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (April 27, 2017)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[StyleDefinitions -> "Default.nb"]], 
+   Cell[
+    StyleData["Title"], FontFamily -> "Source Sans Pro", FontTracking -> -0.8,
+     FontColor -> RGBColor[0.65, 0, 0]], 
+   Cell[
+    StyleData["Abstract", StyleDefinitions -> StyleData["Text"]], FontSize -> 
+    16, FontSlant -> "Italic", FontColor -> GrayLevel[0.4]], 
+   Cell[
+    StyleData["Section"], CellFrame -> False, FontFamily -> "Source Sans Pro",
+     FontTracking -> -0.5, $CellContext`ReturnCreatesNewCell -> 
+    True, $CellContext`DefaultReturnCreatedCellStyle -> "Text"], 
+   Cell[
+    StyleData["FurtherExplorationSection"], 
+    CellMargins -> {{28, Inherited}, {6, 24}}, 
+    CellGroupingRules -> {"SectionGrouping", 30}, DefaultNewCellStyle -> 
+    "FurtherExploration", FontFamily -> "Source Sans Pro Semibold", FontSize -> 
+    22, FontColor -> GrayLevel[0.35]], 
+   Cell[
+    StyleData["FurtherExploration", StyleDefinitions -> StyleData["Text"]], 
+    CellMargins -> {{66, 10}, {5, 5}}, FontSize -> 14, FontWeight -> "Bold", 
+    FontColor -> GrayLevel[0.5], $CellContext`ReturnCreatesNewCell -> True], 
+   Cell[
+    StyleData["AuthorshipSection"], CellMargins -> {{28, Inherited}, {6, 24}},
+     CellGroupingRules -> {"SectionGrouping", 30}, DefaultNewCellStyle -> 
+    "FurtherExploration", FontFamily -> "Source Sans Pro Semibold", FontSize -> 
+    22, FontColor -> GrayLevel[0.35]], 
+   Cell[
+    StyleData["Authorship", StyleDefinitions -> StyleData["Text"]], 
+    CellMargins -> {{66, 10}, {4, 4}}, FontSize -> 14, FontColor -> 
+    GrayLevel[0.5], $CellContext`ReturnCreatesNewCell -> True], 
+   Cell[
+    StyleData["Text"], DefaultNewCellStyle -> 
+    "Direction", $CellContext`ReturnCreatesNewCell -> 
+    True, $CellContext`DefaultReturnCreatedCellStyle -> "Direction"], 
+   Cell[
+    StyleData["Direction", StyleDefinitions -> StyleData["Text"]], 
+    CellDingbat -> 
+    StyleBox["\[FilledSmallSquare]", FontColor -> GrayLevel[0.7]], 
+    CellMargins -> {{78, 10}, {6, 7}}, CellFrameLabelMargins -> 4, 
+    MenuSortingValue -> 10000, MenuCommandKey -> "8", FontSize -> 14, 
+    FontWeight -> "Plain", FontColor -> 
+    GrayLevel[0.4], $CellContext`DefaultReturnCreatedCellStyle -> "Input"], 
+   Cell[
+    StyleData["Code"], MenuCommandKey -> None]}, Visible -> False, 
+  FrontEndVersion -> "11.1 for Microsoft Windows (64-bit) (April 27, 2017)", 
+  StyleDefinitions -> "PrivateStylesheetFormatting.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[583, 22, 330, 5, 95, "Title", "ExpressionUUID" -> \
+"5427fab8-42d7-46e4-8772-01a3e1e763a2"],
+Cell[916, 29, 1231, 18, 121, "Abstract", "ExpressionUUID" -> \
+"d559430b-dd84-4e61-b6de-9659782204bf"],
+Cell[CellGroupData[{
+Cell[2172, 51, 174, 3, 62, "Section", "ExpressionUUID" -> \
+"53e65e2e-c7b8-4267-8aca-6d6c02b45dd6"],
+Cell[2349, 56, 298, 6, 30, "Direction", "ExpressionUUID" -> \
+"bcf7a291-0e02-4fcd-88fe-dae2da9a19e2"],
+Cell[2650, 64, 411, 8, 30, "Direction", "ExpressionUUID" -> \
+"ba96f004-1c46-4504-a5b1-25f03fd76a81"],
+Cell[3064, 74, 403, 7, 30, "Direction", "ExpressionUUID" -> \
+"2ce69b54-a7ae-47a9-8464-934b58db01b7"],
+Cell[3470, 83, 354, 7, 30, "Direction", "ExpressionUUID" -> \
+"5badedca-e437-4ea8-8c2d-1b3d0c101229"],
+Cell[3827, 92, 330, 7, 30, "Direction", "ExpressionUUID" -> \
+"440db77f-f81f-46a4-80c8-6b1cc17bcdbd"],
+Cell[4160, 101, 308, 6, 30, "Direction", "ExpressionUUID" -> \
+"dec20c28-d36e-4e24-9894-dc980f130668"],
+Cell[4471, 109, 221, 5, 30, "Direction", "ExpressionUUID" -> \
+"d02b8a85-6da9-4c47-a213-30387613ef34"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4729, 119, 424, 6, 62, "Section", "ExpressionUUID" -> \
+"fea2deae-064a-4940-9789-cd4897955561"],
+Cell[5156, 127, 2376, 40, 319, "Abstract", "ExpressionUUID" -> \
+"f4dea09a-cb86-4b17-8ef1-7f0b6712b69d"],
+Cell[7535, 169, 892, 16, 68, "Text", "ExpressionUUID" -> \
+"787f60f9-4244-46db-bbd3-d272926924eb"],
+Cell[8430, 187, 649, 12, 49, "Text", "ExpressionUUID" -> \
+"645f9031-0ac3-4671-a0bd-ee176d3cc417"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9116, 204, 157, 3, 62, "Section", "ExpressionUUID" -> \
+"973857e1-dfec-46d6-87db-798a2fb2c863"],
+Cell[9276, 209, 347, 7, 30, "Text", "ExpressionUUID" -> \
+"cfce40ed-c9fb-4054-95b0-84d69a852a78"],
+Cell[9626, 218, 339, 7, 30, "Direction", "ExpressionUUID" -> \
+"7f60eeb5-4c0d-42ff-b785-12b7fe47763a"],
+Cell[9968, 227, 243, 6, 30, "Direction", "ExpressionUUID" -> \
+"f48f8f99-7145-4fa9-b379-e5e2f1d5343e"],
+Cell[10214, 235, 511, 9, 48, "Direction", "ExpressionUUID" -> \
+"d53b1924-3b4d-4cd0-990f-2bd8bd3e721a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10762, 249, 301, 4, 58, "FurtherExplorationSection", "ExpressionUUID" -> \
+"b10d5765-ad23-40a8-ad47-38b7842c6175"],
+Cell[11066, 255, 656, 11, 45, "FurtherExploration", "ExpressionUUID" -> \
+"c27fc361-4f19-4356-bd42-8fff1a8397e9"],
+Cell[11725, 268, 1133, 21, 159, "FurtherExploration", "ExpressionUUID" -> \
+"df0d81d5-b79b-48ca-bb5c-681145b8384c"],
+Cell[12861, 291, 288, 7, 48, "Direction", "ExpressionUUID" -> \
+"776037b0-bde3-43bc-a2e5-76ae42275faa"],
+Cell[13152, 300, 210, 4, 30, "Direction", "ExpressionUUID" -> \
+"78634d16-310c-4345-81ca-f1a2ee9cf3d2"],
+Cell[13365, 306, 182, 3, 30, "Direction", "ExpressionUUID" -> \
+"971845de-62cf-4329-a857-91f8d4e41993"],
+Cell[13550, 311, 286, 9, 86, "Direction", "ExpressionUUID" -> \
+"26e291fd-e23c-4912-80f2-3b89f0e2bf24"],
+Cell[13839, 322, 395, 10, 86, "Direction", "ExpressionUUID" -> \
+"d9edea44-0ac2-4de7-bded-5db71987db70"],
+Cell[14237, 334, 445, 12, 162, "Direction", "ExpressionUUID" -> \
+"66a7c882-1ca4-4b9d-ad33-436865faf651"],
+Cell[14685, 348, 382, 9, 105, "Direction", "ExpressionUUID" -> \
+"40f8cc06-d591-47e8-ba4c-53fe51af916a"],
+Cell[15070, 359, 393, 10, 124, "Direction", "ExpressionUUID" -> \
+"438293ee-1354-4a24-aea9-83cc4a3e56b3"],
+Cell[15466, 371, 273, 8, 86, "Direction", "ExpressionUUID" -> \
+"a38b94f4-acc4-4cb7-aa1b-271bdbd80a3a"],
+Cell[15742, 381, 298, 8, 86, "Direction", "ExpressionUUID" -> \
+"61897782-e76a-4fee-be7d-e37ec36ea5d0"],
+Cell[16043, 391, 253, 6, 48, "Direction", "ExpressionUUID" -> \
+"93396f0d-5cf3-4b25-ad27-3ca9a38cdd8d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16333, 402, 179, 3, 58, "AuthorshipSection", "ExpressionUUID" -> \
+"dd2af63a-d58d-460a-b905-b87fb381357c"],
+Cell[16515, 407, 216, 4, 24, "Authorship", "ExpressionUUID" -> \
+"e8968544-93b7-4f8f-a4c1-81068b246725"],
+Cell[16734, 413, 214, 4, 24, "Authorship", "ExpressionUUID" -> \
+"c7495659-8ed5-4980-aa0e-e9a159c465bf"],
+Cell[16951, 419, 224, 4, 24, "Authorship", "ExpressionUUID" -> \
+"599fe3b9-7c5d-4a1b-962e-19bd42598d98"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

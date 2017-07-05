@@ -1,0 +1,185 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='WolframDesktop 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       161,          7]
+NotebookDataLength[      5609,        175]
+NotebookOptionsPosition[      3587,        118]
+NotebookOutlinePosition[      3995,        134]
+CellTagsIndexPosition[      3952,        131]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Computation for Neuroscience", "Title",
+ CellChangeTimes->{{3.7082561843438134`*^9, 
+  3.708256188583048*^9}},ExpressionUUID->"a952bd43-3852-40ef-83b0-\
+08c0275fc26e"],
+
+Cell[CellGroupData[{
+
+Cell["Unit 1 - Introduction to Computation for Neuroscience", "Outline1",
+ CellChangeTimes->{{3.7082561894606094`*^9, 
+  3.708256198198719*^9}},ExpressionUUID->"c1acf349-6b8b-4eb5-b26e-\
+7cec2a4aa6f4"],
+
+Cell["Week 1 - What is computation?", "Outline2",
+ CellChangeTimes->{{3.708256199214862*^9, 
+  3.7082562077048407`*^9}},ExpressionUUID->"2d404620-2951-442b-93b0-\
+16352e36e271"],
+
+Cell[CellGroupData[{
+
+Cell["Week 2 - Intro to visualizations", "Outline2",
+ CellChangeTimes->{{3.7082562081171255`*^9, 
+  3.7082562460205374`*^9}},ExpressionUUID->"3ac61213-f952-4bdb-90d6-\
+b71486ac886b"],
+
+Cell[CellGroupData[{
+
+Cell["Line plots", "Outline3",
+ CellChangeTimes->{{3.7082562467364*^9, 
+  3.7082562753628244`*^9}},ExpressionUUID->"fcb34db4-88b7-445a-bfca-\
+7405d17b5f9e"],
+
+Cell["Axes (Activity 3)", "Outline4",
+ CellChangeTimes->{{3.7082562762113733`*^9, 
+  3.708256295279064*^9}},ExpressionUUID->"38629775-f7d3-4ecc-b038-\
+b45cfd7e89ad"]
+}, Open  ]],
+
+Cell["Bar charts", "Outline3",
+ CellChangeTimes->{{3.7082562486830873`*^9, 
+  3.7082562511210775`*^9}},ExpressionUUID->"62d1ff7e-f78a-4380-bba4-\
+3eec59f0d71f"],
+
+Cell[CellGroupData[{
+
+Cell["Histograms", "Outline3",
+ CellChangeTimes->{{3.7082562514570436`*^9, 
+  3.7082562832594423`*^9}},ExpressionUUID->"f45ea56e-edda-40da-ba9f-\
+223b61ef7fad"],
+
+Cell["Bin Size (Activity 1) ", "Outline4",
+ CellChangeTimes->{{3.7082562847130985`*^9, 
+  3.7082563018192754`*^9}},ExpressionUUID->"4c0afb65-fed2-47ff-8460-\
+34833c65e814"]
+}, Open  ]],
+
+Cell["Cumulative plots", "Outline3",
+ CellChangeTimes->{{3.7082562552537527`*^9, 
+  3.708256257539091*^9}},ExpressionUUID->"3b66bd67-2ad1-4384-a230-\
+0cca0a005f35"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Week 3 - Intro to working with data", "Outline2",
+ CellChangeTimes->{{3.70825621697897*^9, 3.7082562660547333`*^9}, {
+  3.7082563079507027`*^9, 3.7082563079507027`*^9}, {3.708256345842987*^9, 
+  3.708256345842987*^9}},ExpressionUUID->"01bed20f-0017-488a-a009-\
+adcfb8046685"],
+
+Cell["Tuning curve (Exploration 1)", "Outline3",
+ CellChangeTimes->{{3.708256350623074*^9, 
+  3.7082563647945786`*^9}},ExpressionUUID->"5339f4cc-f833-4b20-927e-\
+e0b31982a532"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Week 4 - Data analysis basics", "Outline2",
+ CellChangeTimes->{{3.7082563088175497`*^9, 
+  3.7082563235693035`*^9}},ExpressionUUID->"e6c07e0d-f008-44a4-92cd-\
+66817dce9f41"],
+
+Cell["Summary statistics", "Outline3",
+ CellChangeTimes->{{3.708256324538461*^9, 3.708256326669794*^9}, {
+  3.7082564858182287`*^9, 
+  3.7082564858182287`*^9}},ExpressionUUID->"f1d5ed30-edf9-4857-98c3-\
+e14a446420fa"],
+
+Cell["Working with vectors (Projet 1)", "Outline3",
+ CellChangeTimes->{{3.708256486476014*^9, 
+  3.7082564944149504`*^9}},ExpressionUUID->"041eb9b1-7102-44b0-b78e-\
+c23c0074d9e6"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{719, 868},
+WindowMargins->{{Automatic, 14}, {Automatic, 40}},
+FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (April 27, 2017)",
+StyleDefinitions->FrontEnd`FileName[{"Utility"}, "Outline.nb", 
+  CharacterEncoding -> "UTF-8"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[583, 22, 173, 3, 101, "Title", "ExpressionUUID" -> \
+"a952bd43-3852-40ef-83b0-08c0275fc26e"],
+Cell[CellGroupData[{
+Cell[781, 29, 201, 3, 36, "Outline1", "ExpressionUUID" -> \
+"c1acf349-6b8b-4eb5-b26e-7cec2a4aa6f4"],
+Cell[985, 34, 177, 3, 32, "Outline2", "ExpressionUUID" -> \
+"2d404620-2951-442b-93b0-16352e36e271"],
+Cell[CellGroupData[{
+Cell[1187, 41, 182, 3, 29, "Outline2", "ExpressionUUID" -> \
+"3ac61213-f952-4bdb-90d6-b71486ac886b"],
+Cell[CellGroupData[{
+Cell[1394, 48, 156, 3, 28, "Outline3", "ExpressionUUID" -> \
+"fcb34db4-88b7-445a-bfca-7405d17b5f9e"],
+Cell[1553, 53, 165, 3, 26, "Outline4", "ExpressionUUID" -> \
+"38629775-f7d3-4ecc-b038-b45cfd7e89ad"]
+}, Open  ]],
+Cell[1733, 59, 160, 3, 28, "Outline3", "ExpressionUUID" -> \
+"62d1ff7e-f78a-4380-bba4-3eec59f0d71f"],
+Cell[CellGroupData[{
+Cell[1918, 66, 160, 3, 25, "Outline3", "ExpressionUUID" -> \
+"f45ea56e-edda-40da-ba9f-223b61ef7fad"],
+Cell[2081, 71, 172, 3, 26, "Outline4", "ExpressionUUID" -> \
+"4c0afb65-fed2-47ff-8460-34833c65e814"]
+}, Open  ]],
+Cell[2268, 77, 164, 3, 28, "Outline3", "ExpressionUUID" -> \
+"3b66bd67-2ad1-4384-a230-0cca0a005f35"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2469, 85, 281, 4, 32, "Outline2", "ExpressionUUID" -> \
+"01bed20f-0017-488a-a009-adcfb8046685"],
+Cell[2753, 91, 176, 3, 28, "Outline3", "ExpressionUUID" -> \
+"5339f4cc-f833-4b20-927e-e0b31982a532"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2966, 99, 179, 3, 32, "Outline2", "ExpressionUUID" -> \
+"e6c07e0d-f008-44a4-92cd-66817dce9f41"],
+Cell[3148, 104, 217, 4, 28, "Outline3", "ExpressionUUID" -> \
+"f1d5ed30-edf9-4857-98c3-e14a446420fa"],
+Cell[3368, 110, 179, 3, 25, "Outline3", "ExpressionUUID" -> \
+"041eb9b1-7102-44b0-b78e-c23c0074d9e6"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
